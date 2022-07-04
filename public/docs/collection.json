@@ -1,0 +1,3334 @@
+{
+    "variable": [
+        {
+            "id": "baseUrl",
+            "key": "baseUrl",
+            "type": "string",
+            "name": "string",
+            "value": "http:\/\/127.0.0.1:8000"
+        }
+    ],
+    "info": {
+        "name": "Kotonaru-web-user",
+        "_postman_id": "bcf5051a-cd30-4d00-b976-22f4df50097e",
+        "description": "",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
+    },
+    "item": [
+        {
+            "name": "Application",
+            "description": "",
+            "item": [
+                {
+                    "name": "Application List.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/application",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/application"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":{\"message\":\"messages.show_all_success\",\"data\":[{\"id\":1,\"student_id\":1,\"company_id\":1,\"internship_post_id\":1,\"status\":null,\"cancel_status\":1,\"created_at\":\"2022-03-25T09:23:22.000000Z\",\"updated_at\":\"2022-03-25T09:23:22.000000Z\",\"deleted_at\":null,\"student\":{\"id\":1,\"family_name\":\"minhaz\",\"first_name\":\"Ahamed\",\"family_name_furigana\":\"\",\"first_name_furigana\":\"\",\"email_valid\":\"demo@gmail.com\",\"email_invalid\":null,\"is_email_approved\":0,\"education_facility_id\":1,\"university_name\":null,\"graduate_year\":null,\"graduate_month\":null,\"self_introduction\":null,\"status\":1,\"created_at\":null,\"updated_at\":null,\"deleted_at\":null},\"company\":{\"id\":1,\"internal_company_id\":\"demo\",\"name\":\"www\",\"furigana_name\":\"www\",\"logo_img\":null,\"business_industry_id\":null,\"office_address\":null,\"office_phone\":null,\"office_email1\":null,\"status\":1,\"office_email2\":null,\"office_email3\":null,\"website_url\":null,\"client_liason\":null,\"admin_memo\":null,\"created_at\":null,\"updated_at\":null,\"deleted_at\":null},\"internship_post\":{\"id\":1,\"title\":\"sdfsdf\",\"company_id\":0,\"business_industry_id\":0,\"work_category_id\":0,\"period\":0,\"workload\":0,\"internship_feature_id\":0,\"application_step_1\":null,\"application_step_2\":null,\"application_step_3\":null,\"application_step_4\":null,\"seo_slug\":null,\"seo_ogp\":null,\"seo_meta_description\":null,\"seo_featured_image\":null,\"description_corporate_profile\":null,\"description_internship_content\":null,\"draft_or_public\":null,\"page_views\":null,\"status\":null,\"created_at\":null,\"updated_at\":null,\"deleted_at\":null,\"wage\":0,\"target_grade\":0,\"public_date\":null,\"display_order\":null}}]}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Application Create.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/application",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/application"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"student_id\":1,\"company_id\":1,\"internship_post_id\":1,\"status\":1,\"cancel_status\":true,\"is_admin_read\":3}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":{\"message\":\"messages.record_created_successfully\",\"data\":{\"student_id\":\"1\",\"company_id\":\"1\",\"internship_post_id\":\"1\",\"cancel_status\":\"1\",\"updated_at\":\"2022-03-25T09:23:22.000000Z\",\"created_at\":\"2022-03-25T09:23:22.000000Z\",\"id\":1}}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Application View.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/application\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/application\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":{\"message\":\"messages.show_all_success\",\"data\":[{\"id\":1,\"student_id\":1,\"company_id\":1,\"internship_post_id\":1,\"status\":null,\"cancel_status\":1,\"created_at\":\"2022-03-25T09:23:22.000000Z\",\"updated_at\":\"2022-03-25T09:23:22.000000Z\",\"deleted_at\":null,\"student\":{\"id\":1,\"family_name\":\"minhaz\",\"first_name\":\"Ahamed\",\"family_name_furigana\":\"\",\"first_name_furigana\":\"\",\"email_valid\":\"demo@gmail.com\",\"email_invalid\":null,\"is_email_approved\":0,\"education_facility_id\":1,\"university_name\":null,\"graduate_year\":null,\"graduate_month\":null,\"self_introduction\":null,\"status\":1,\"created_at\":null,\"updated_at\":null,\"deleted_at\":null},\"company\":{\"id\":1,\"internal_company_id\":\"demo\",\"name\":\"www\",\"furigana_name\":\"www\",\"logo_img\":null,\"business_industry_id\":null,\"office_address\":null,\"office_phone\":null,\"office_email1\":null,\"status\":1,\"office_email2\":null,\"office_email3\":null,\"website_url\":null,\"client_liason\":null,\"admin_memo\":null,\"created_at\":null,\"updated_at\":null,\"deleted_at\":null},\"internship_post\":{\"id\":1,\"title\":\"sdfsdf\",\"company_id\":0,\"business_industry_id\":0,\"work_category_id\":0,\"period\":0,\"workload\":0,\"internship_feature_id\":0,\"application_step_1\":null,\"application_step_2\":null,\"application_step_3\":null,\"application_step_4\":null,\"seo_slug\":null,\"seo_ogp\":null,\"seo_meta_description\":null,\"seo_featured_image\":null,\"description_corporate_profile\":null,\"description_internship_content\":null,\"draft_or_public\":null,\"page_views\":null,\"status\":null,\"created_at\":null,\"updated_at\":null,\"deleted_at\":null,\"wage\":0,\"target_grade\":0,\"public_date\":null,\"display_order\":null}}]}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Application Updatye.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/application\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/application\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "laudantium",
+                                    "description": "The ID of the application."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"student_id\":1,\"company_id\":1,\"internship_post_id\":1,\"status\":1,\"cancel_status\":true,\"is_admin_read\":4}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":{\"message\":\"messages.update_success\",\"data\":{\"student_id\":\"1\",\"company_id\":\"1\",\"internship_post_id\":\"1\",\"cancel_status\":\"1\",\"updated_at\":\"2022-03-25T09:23:22.000000Z\",\"created_at\":\"2022-03-25T09:23:22.000000Z\",\"id\":1}}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Application Delete.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/application\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/application\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"message\":\"The record has been deleted successfully.\"}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Authentication",
+            "description": "",
+            "item": [
+                {
+                    "name": "Send Password Email For Student",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/student\/password-reset",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/student\/password-reset"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"email_valid\":\"student@domain.com\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{'data': {'message':'Reset link sent toy your email'}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Send Password Email For Admin",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/admin\/password-reset",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/admin\/password-reset"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"email\":\"admin@domain.com\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{'data': {'message':'Reset link sent toy your email'} }",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "EducationFacilities",
+            "description": "",
+            "item": [
+                {
+                    "name": "EducationFacilities List.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/education-facility",
+                            "query": [
+                                {
+                                    "key": "limit",
+                                    "value": "19",
+                                    "description": "optional Data Per Page Limit. Example : 10",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/education-facility?limit=19"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":{\"message\":\"messages.show_all_success\",\"data\":[{\"id\":1,\"name\":\"sdfds\",\"type\":0,\"created_at\":null,\"updated_at\":null,\"deleted_at\":null},{\"id\":2,\"name\":\"Celine Borer\",\"type\":1,\"created_at\":\"2022-03-17T17:17:38.000000Z\",\"updated_at\":\"2022-03-17T17:17:38.000000Z\",\"deleted_at\":null},{\"id\":3,\"name\":\"Alexander Steuber\",\"type\":1,\"created_at\":\"2022-03-17T17:17:38.000000Z\",\"updated_at\":\"2022-03-17T17:17:38.000000Z\",\"deleted_at\":null},{\"id\":4,\"name\":\"London Murray\",\"type\":1,\"created_at\":\"2022-03-17T17:17:38.000000Z\",\"updated_at\":\"2022-03-17T17:17:38.000000Z\",\"deleted_at\":null},{\"id\":5,\"name\":\"Jasen Haag V\",\"type\":1,\"created_at\":\"2022-03-17T17:17:38.000000Z\",\"updated_at\":\"2022-03-17T17:17:38.000000Z\",\"deleted_at\":null},{\"id\":6,\"name\":\"Florencio Gerlach\",\"type\":1,\"created_at\":\"2022-03-17T17:17:39.000000Z\",\"updated_at\":\"2022-03-17T17:17:39.000000Z\",\"deleted_at\":null},{\"id\":7,\"name\":\"Lori Carter\",\"type\":1,\"created_at\":\"2022-03-17T17:17:39.000000Z\",\"updated_at\":\"2022-03-17T17:17:39.000000Z\",\"deleted_at\":null},{\"id\":8,\"name\":\"Felicity Eichmann\",\"type\":1,\"created_at\":\"2022-03-17T17:17:39.000000Z\",\"updated_at\":\"2022-03-17T17:17:39.000000Z\",\"deleted_at\":null},{\"id\":9,\"name\":\"Gay Emmerich\",\"type\":1,\"created_at\":\"2022-03-17T17:17:39.000000Z\",\"updated_at\":\"2022-03-17T17:17:39.000000Z\",\"deleted_at\":null},{\"id\":10,\"name\":\"Nelda Lehner\",\"type\":1,\"created_at\":\"2022-03-17T17:17:39.000000Z\",\"updated_at\":\"2022-03-17T17:17:39.000000Z\",\"deleted_at\":null},{\"id\":11,\"name\":\"Prof. Kevin Senger\",\"type\":1,\"created_at\":\"2022-03-17T17:17:39.000000Z\",\"updated_at\":\"2022-03-17T17:17:39.000000Z\",\"deleted_at\":null}]}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "EducationFacilities Create.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/education-facility",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/education-facility"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"demo name\",\"type\":1}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":{\"message\":\"messages.record_created_successfully\",\"data\":{\"name\":\"asdsadas\",\"type\":\"1\",\"updated_at\":\"2022-03-18T03:15:43.000000Z\",\"created_at\":\"2022-03-18T03:15:43.000000Z\",\"id\":12}}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "EducationFacilities View.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/education-facility\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/education-facility\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":{\"message\":\"messages.data_found\",\"data\":{\"id\":1,\"name\":\"sdfds\",\"type\":0,\"created_at\":null,\"updated_at\":null,\"deleted_at\":null}}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "EducationFacilities Update.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/education-facility\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/education-facility\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"demo name\",\"type\":1,\"slug\":\"demo-slug\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"message\":\"The record has been updated successfully.\",\"data\":{\"id\":52,\"name\":\"demo\",\"slug\":\"demo-slug\",\"created_at\":\"2022-03-17T06:05:27.000000Z\",\"updated_at\":\"2022-03-17T07:21:33.000000Z\",\"deleted_at\":null}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "EducationFacilities Delete.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/education-facility\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/education-facility\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":{\"message\":\"messages.deleted_success\"}}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Endpoints",
+            "description": "",
+            "item": [
+                {
+                    "name": "api\/master",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/master",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/master"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "59"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"data\":{\"total_companies\":1,\"total_companies_not_approved\":0,\"work_categories\":[{\"id\":1,\"name\":\"demo category\",\"slug\":\"demo-category\",\"created_at\":null,\"updated_at\":null,\"deleted_at\":null}],\"internship_feature_list\":[{\"id\":1,\"name\":\"CXO\\u76f4\\u4e0b\"},{\"id\":2,\"name\":\"\\u672a\\u7d4c\\u9a13OK\"},{\"id\":3,\"name\":\"\\u30e1\\u30f3\\u30bf\\u30fc\\u5728\\u7c4d\"},{\"id\":4,\"name\":\"\\u82f1\\u8a9e\\u3092\\u4f7f\\u3046\"},{\"id\":5,\"name\":\"\\u9ad8\\u6642\\u7d66\"},{\"id\":6,\"name\":\"\\u5185\\u5b9a\\u5b9f\\u7e3e\\u591a\\u6570\"}],\"period\":[{\"id\":1,\"name\":\"1\\u30f6\\u6708\"},{\"id\":2,\"name\":\"1\\u301c3\\u30f6\\u6708\"},{\"id\":3,\"name\":\"3\\u30f6\\u6708\\u301c\"}],\"wage\":[{\"id\":1,\"name\":\"\\u00a51,000\\u301c\"},{\"id\":2,\"name\":\"\\u00a51,500\\u301c\"},{\"id\":3,\"name\":\"\\u00a52,000\\u301c\"}],\"workload\":[{\"id\":1,\"name\":\"10h\\u672a\\u6e80\\\/\\u9031\"},{\"id\":2,\"name\":\"10\\u301c20h\\\/\\u9031\"},{\"id\":3,\"name\":\"20h\\u4ee5\\u4e0a\\\/\\u9031\"}],\"target_grade\":[{\"id\":1,\"name\":\"1\\u301c2\\u5e74\\u751f\"},{\"id\":2,\"name\":\"1\\u301c3\\u5e74\\u751f\"},{\"id\":3,\"name\":\"\\u5b66\\u5e74\\u554f\\u308f\\u305a\"}]}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/admin\/log-in",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/admin\/log-in",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/admin\/log-in"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"email\":\"vrgcwgprtojkomhqcm\",\"password\":\"fvbkajhxwjb\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "api\/admin\/create",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/admin\/create",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/admin\/create"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"last_name\":\"lfezsleadabqz\",\"email\":\"sibyl98@example.com\",\"password\":\"pqdyj\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "api\/export\/company",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/export\/company",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/export\/company"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Display a listing of the resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/admin",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/admin"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/admin",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/admin",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/admin"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"last_name\":\"\",\"email\":\"breitenberg.alfredo@example.net\",\"password\":\"nfgvxvobiynla\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "api\/admin\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/admin\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/admin\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "5",
+                                    "description": "The ID of the admin."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/admin\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/admin\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/admin\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "17",
+                                    "description": "The ID of the admin."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"last_name\":\"oepq\",\"email\":\"jaydon68@example.com\",\"password\":\"qgllwuzgejit\",\"status\":false}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "api\/admin\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/admin\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/admin\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "16",
+                                    "description": "The ID of the admin."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display a listing of the resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/media-tag",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/media-tag"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Store a newly created resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/media-tag",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/media-tag"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display the specified resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/media-tag\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/media-tag\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "assumenda",
+                                    "description": "The ID of the media tag."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Update the specified resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/media-tag\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/media-tag\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "quia",
+                                    "description": "The ID of the media tag."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Remove the specified resource from storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/media-tag\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/media-tag\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "quo",
+                                    "description": "The ID of the media tag."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display a listing of the resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/internship-post",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/internship-post"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"paginate\":3,\"page\":12,\"sort\":\"email\",\"order\":\"desc\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Store a newly created resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/internship-post",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/internship-post"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "multipart\/form-data"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "title",
+                                    "value": "pxxhbuyualnzucvrwegqjpyumwqcagvdyoufcnylshkorhorzzcqfawsanhijuvycovmuphqax",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "company_id",
+                                    "value": 7.69,
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "work_category_id",
+                                    "value": 29.33821457,
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "period",
+                                    "value": 4.36845,
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "workload",
+                                    "value": 258067.83,
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "wage",
+                                    "value": 3,
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "internship_feature_id",
+                                    "value": 1.8,
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "target_grade",
+                                    "value": 129.318499,
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "application_step_1",
+                                    "value": "",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "application_step_2",
+                                    "value": "chtpduzli",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "application_step_3",
+                                    "value": "ksydomknmvqbul",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "application_step_4",
+                                    "value": "vpechaxwiswfooblamau",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "seo_slug",
+                                    "value": "ttcmkbrodwudgjiwqdukwcpbzzdnrdqrwkoikjwkidoyfgdqmlyzwmbffnqpdezvgrqukkiolrakceoifszlwostekpcwjzdkxrwssecrtyofjoticsvogjwkxxbftuvwgltwhyuxwqyszyswfiljzzpawapxbehtesajhibtdrzetgqafgshnnlomzd",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "seo_ogp",
+                                    "value": "hjsoqgannvbcavoosxnitxefgihjzexuecfmkcxqbauidsjkisrrukzdvyfwcmtqgyuzivelyj",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "seo_meta_description",
+                                    "value": "zoultassmulsxswvllmlrzbeqozjlqndilpexoeofxuuuquhkpxrlprpdrkeuaapfwxnhmctxmvjwklqrnkucwoprnaexdoictcwszjmppriglrzpiwzkprygrwadaojlpqrhwcsfxnfisuaspmhfdhggrwvsjgudlpnzrzqnviruftlujfjwseqdvklcqlkwzguldbmormzezpkbauxkwwfqecwidcloxzgxtwdsntenlglgwfusaqkbjo",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "description_corporate_profile",
+                                    "value": "blanditiis",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "description_internship_content",
+                                    "value": "ut",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "draft_or_public",
+                                    "value": true,
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "page_views",
+                                    "value": 15,
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "status",
+                                    "value": false,
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "public_date",
+                                    "value": "2022-03-25T10:35:43",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "seo_featured_image",
+                                    "src": [],
+                                    "type": "file"
+                                }
+                            ]
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display the specified resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/internship-post\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/internship-post\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "aspernatur",
+                                    "description": "The ID of the internship post."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Update the specified resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/internship-post\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/internship-post\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "veniam",
+                                    "description": "The ID of the internship post."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "multipart\/form-data"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "title",
+                                    "value": "xpyjsahfcfvkzwzyyjxcijlmyyhnjvqmvnzumagsgvtudtzoedlptoebnibocbofccwvtilndiahyfxvzfwqp",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "company_id",
+                                    "value": 2701.5,
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "work_category_id",
+                                    "value": 701.14950999,
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "period",
+                                    "value": 43803038.669,
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "workload",
+                                    "value": 209.020614444,
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "wage",
+                                    "value": 5,
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "internship_feature_id",
+                                    "value": 11152.36643,
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "target_grade",
+                                    "value": 2.90408141,
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "application_step_1",
+                                    "value": "njs",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "application_step_2",
+                                    "value": "bvmltgidhjjuvdshhatj",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "application_step_3",
+                                    "value": "jzdszk",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "application_step_4",
+                                    "value": "qsgtkduqo",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "seo_slug",
+                                    "value": "ukpswdpnzlhmijupssscyqecpmmgxhqukudktsvyjwepjdyvonwwexeflwainkqfbqwbfqdhbtkqiqgufnlxcrcxskyodgvavnuhlrjfjolpnmmjsupslhosnumdssxpyxpoiucszhmklkbgvqzkvvazaauspfqasqeviquotrjsdwwxzrqpbhcvgvodhq",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "seo_ogp",
+                                    "value": "dbpfeagqyfryelzzzzmyoosqnydwjewgjwznarclcnktgnijqpbcppnnfq",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "seo_meta_description",
+                                    "value": "qehzusmlcyaaebueaacukgzbnlyrwfptslukrxrcxpuyjsdadpcohzhmfzzagnbarqmyxyvrgdotimrywfuqfdbxpoxnlzvuhvekfbjipwskrclylxquzscvovpabapekivaacgefbxna",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "description_corporate_profile",
+                                    "value": "excepturi",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "description_internship_content",
+                                    "value": "fugiat",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "draft_or_public",
+                                    "value": true,
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "page_views",
+                                    "value": 4,
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "status",
+                                    "value": false,
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "public_date",
+                                    "value": "2022-03-25T10:35:43",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "seo_featured_image",
+                                    "src": [],
+                                    "type": "file"
+                                }
+                            ]
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Remove the specified resource from storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/internship-post\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/internship-post\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "nesciunt",
+                                    "description": "The ID of the internship post."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display a listing of the resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/company",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/company"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Store a newly created resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/company",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/company"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"internal_company_id\":\"maxime\",\"name\":\"qui\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display the specified resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/company\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/company\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the company."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Update the specified resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/company\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/company\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the company."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"internal_company_id\":\"saepe\",\"name\":\"animi\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Remove the specified resource from storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/company\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/company\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "18",
+                                    "description": "The ID of the company."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display a listing of the resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/favorite",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/favorite"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Store a newly created resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/favorite",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/favorite"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"student_id\":3,\"internship_post_id\":1,\"status\":16}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display the specified resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/favorite\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/favorite\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "velit",
+                                    "description": "The ID of the favorite."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Remove the specified resource from storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/favorite\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/favorite\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "explicabo",
+                                    "description": "The ID of the favorite."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display a listing of the resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/feedback",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/feedback"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Store a newly created resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/feedback",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/feedback"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display the specified resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/feedback\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/feedback\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "similique",
+                                    "description": "The ID of the feedback."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Update the specified resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/feedback\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/feedback\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "11",
+                                    "description": "The ID of the feedback."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Remove the specified resource from storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/feedback\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/feedback\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "7",
+                                    "description": "The ID of the feedback."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display a listing of the resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/business_industry",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/business_industry"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Store a newly created resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/business_industry",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/business_industry"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display the specified resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/business_industry\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/business_industry\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "amet",
+                                    "description": "The ID of the business industry."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Update the specified resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/business_industry\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/business_industry\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "qui",
+                                    "description": "The ID of the business industry."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "InternshipFeatures",
+            "description": "",
+            "item": [
+                {
+                    "name": "InternshipFeatures List.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/internship-feature",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/internship-feature"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":{\"message\":\"messages.show_all_success\",\"data\":[{\"id\":1,\"name\":\"demo\",\"slug\":\"demo-slug\",\"created_at\":\"2022-03-18T09:53:57.000000Z\",\"updated_at\":\"2022-03-18T09:53:57.000000Z\",\"deleted_at\":null},{\"id\":2,\"name\":\"demo1\",\"slug\":\"demo-slug1\",\"created_at\":\"2022-03-18T09:54:19.000000Z\",\"updated_at\":\"2022-03-18T09:54:19.000000Z\",\"deleted_at\":null}]}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "InternshipFeatures Create.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/internship-feature",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/internship-feature"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"demo name\",\"slug\":\"demo-slug\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":{\"message\":\"messages.record_created_successfully\",\"data\":{\"name\":\"demo\",\"slug\":\"demo-slug\",\"updated_at\":\"2022-03-18T09:53:57.000000Z\",\"created_at\":\"2022-03-18T09:53:57.000000Z\",\"id\":1}}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "InternshipFeatures View.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/internship-feature\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/internship-feature\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"message\":\"The record exists.\",\"data\":{\"id\":52,\"name\":\"rereeeeee\",\"slug\":\"erererwerwerew\",\"created_at\":\"2022-03-17T06:05:27.000000Z\",\"updated_at\":\"2022-03-17T06:05:27.000000Z\",\"deleted_at\":null}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "InternshipFeatures Update.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/internship-feature\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/internship-feature\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"demo name\",\"slug\":\"demo-slug\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":{\"message\":\"messages.update_success\",\"data\":{\"id\":1,\"name\":\"change\",\"slug\":\"chage-demo\",\"created_at\":\"2022-03-18T09:53:57.000000Z\",\"updated_at\":\"2022-03-18T09:55:20.000000Z\",\"deleted_at\":null}}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "InternshipFeatures Delete.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/internship-feature\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/internship-feature\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":{\"message\":\"messages.deleted_success\"}}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Media Posts",
+            "description": "",
+            "item": [
+                {
+                    "name": "Media Posts List.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/media-posts",
+                            "query": [
+                                {
+                                    "key": "limit",
+                                    "value": "9",
+                                    "description": "optional Data Per Page Limit. Example : 10",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/media-posts?limit=9"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"status\":\"Success\",\"message\":\"Media Posts List\",\"code\":200,\"data\":{\"current_page\":1,\"data\":[{\"id\":1,\"title\":\"Post Title\",\"summery\":\"Post Summery\",\"media_tag_id\":1,\"seo_slug\":\"media-slug\",\"seo_ogp\":\"media-seo-ogp\",\"seo_featured_image\":\"media-seo_featured_image\",\"description\":\"media-description\",\"is_draft\":1,\"page_views\":1,\"status\":1,\"created_at\":\"2022-03-14T08:08:23.000000Z\",\"updated_at\":\"2022-03-14T08:08:23.000000Z\",\"deleted_at\":null}],\"first_page_url\":\"http:\/\/localhost:8000\/api\/media-posts?page=1\",\"from\":1,\"last_page\":1,\"last_page_url\":\"http:\/\/localhost:8000\/api\/media-posts?page=1\",\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\/\/localhost:8000\/api\/media-posts?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"next_page_url\":null,\"path\":\"http:\/\/localhost:8000\/api\/media-posts\",\"per_page\":\"5\",\"prev_page_url\":null,\"to\":1,\"total\":1}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Media Posts Create.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/media-posts",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/media-posts"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"title\":\"Post Title\",\"summery\":\"Post Summery\",\"media_tag_id\":\"Post Media Tag\",\"seo_slug\":\"media-slug\",\"seo_ogp\":\"media-seo-ogp\",\"seo_featured_image\":\"media-seo_featured_image\",\"description\":\"media-description\",\"is_draft\":true,\"page_views\":1,\"status\":true}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"status\":\"Success\",\"message\":\"Created Successfully\",\"code\":201,\"data\":{\"title\":\"Post Title\",\"summery\":\"Post Summery\",\"media_tag_id\":\"1\",\"seo_slug\":\"media-slug\",\"seo_ogp\":\"media-seo-ogp\",\"seo_featured_image\":\"media-seo_featured_image\",\"description\":\"media-description\",\"is_draft\":true,\"page_views\":\"1\",\"status\":true,\"updated_at\":\"2022-03-14T08:07:25.000000Z\",\"created_at\":\"2022-03-14T08:07:25.000000Z\",\"id\":5}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Media Posts View.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/media-posts\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/media-posts\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"status\":\"Success\",\"message\":\"Media Post View\",\"code\":200,\"data\":{\"id\":1,\"title\":\"Post Title\",\"summery\":\"Post Summery\",\"media_tag_id\":1,\"seo_slug\":\"media-slug\",\"seo_ogp\":\"media-seo-ogp\",\"seo_featured_image\":\"media-seo_featured_image\",\"description\":\"media-description\",\"is_draft\":1,\"page_views\":1,\"status\":1,\"created_at\":\"2022-03-14T08:08:23.000000Z\",\"updated_at\":\"2022-03-14T08:08:23.000000Z\",\"deleted_at\":null}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Media Posts Update.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/media-posts\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/media-posts\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "ipsa",
+                                    "description": "The ID of the media post."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"title\":\"Post Title\",\"summery\":\"Post Summery\",\"media_tag_id\":\"Post Media Tag\",\"seo_slug\":\"media-slug\",\"seo_ogp\":\"media-seo-ogp\",\"seo_featured_image\":\"media-seo_featured_image\",\"description\":\"media-description\",\"is_draft\":true,\"page_views\":1,\"status\":true}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"status\":\"Success\",\"message\":\"Updated Successfully\",\"code\":201,\"data\":{\"student_id\":\"1\",\"company_id\":\"1\",\"internship_post_id\":\"1\",\"cancel_status\":null,\"updated_at\":\"2022-03-10T16:30:14.000000Z\",\"created_at\":\"2022-03-10T16:30:14.000000Z\",\"id\":1}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Media Posts Delete.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/media-posts\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/media-posts\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"status\":\"Success\",\"message\":\"Deleted Successfully\",\"code\":200,\"data\":[]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Media Posts List.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/media-post",
+                            "query": [
+                                {
+                                    "key": "limit",
+                                    "value": "9",
+                                    "description": "optional Data Per Page Limit. Example : 10",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/media-post?limit=9"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"status\":\"Success\",\"message\":\"Media Posts List\",\"code\":200,\"data\":{\"current_page\":1,\"data\":[{\"id\":1,\"title\":\"Post Title\",\"summery\":\"Post Summery\",\"media_tag_id\":1,\"seo_slug\":\"media-slug\",\"seo_ogp\":\"media-seo-ogp\",\"seo_featured_image\":\"media-seo_featured_image\",\"description\":\"media-description\",\"is_draft\":1,\"page_views\":1,\"status\":1,\"created_at\":\"2022-03-14T08:08:23.000000Z\",\"updated_at\":\"2022-03-14T08:08:23.000000Z\",\"deleted_at\":null}],\"first_page_url\":\"http:\/\/localhost:8000\/api\/media-posts?page=1\",\"from\":1,\"last_page\":1,\"last_page_url\":\"http:\/\/localhost:8000\/api\/media-posts?page=1\",\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\/\/localhost:8000\/api\/media-posts?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"next_page_url\":null,\"path\":\"http:\/\/localhost:8000\/api\/media-posts\",\"per_page\":\"5\",\"prev_page_url\":null,\"to\":1,\"total\":1}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Media Posts Create.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/media-post",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/media-post"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"title\":\"Post Title\",\"summery\":\"Post Summery\",\"media_tag_id\":\"Post Media Tag\",\"seo_slug\":\"media-slug\",\"seo_ogp\":\"media-seo-ogp\",\"seo_featured_image\":\"media-seo_featured_image\",\"description\":\"media-description\",\"is_draft\":true,\"page_views\":1,\"status\":true}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"status\":\"Success\",\"message\":\"Created Successfully\",\"code\":201,\"data\":{\"title\":\"Post Title\",\"summery\":\"Post Summery\",\"media_tag_id\":\"1\",\"seo_slug\":\"media-slug\",\"seo_ogp\":\"media-seo-ogp\",\"seo_featured_image\":\"media-seo_featured_image\",\"description\":\"media-description\",\"is_draft\":true,\"page_views\":\"1\",\"status\":true,\"updated_at\":\"2022-03-14T08:07:25.000000Z\",\"created_at\":\"2022-03-14T08:07:25.000000Z\",\"id\":5}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Media Posts View.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/media-post\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/media-post\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"status\":\"Success\",\"message\":\"Media Post View\",\"code\":200,\"data\":{\"id\":1,\"title\":\"Post Title\",\"summery\":\"Post Summery\",\"media_tag_id\":1,\"seo_slug\":\"media-slug\",\"seo_ogp\":\"media-seo-ogp\",\"seo_featured_image\":\"media-seo_featured_image\",\"description\":\"media-description\",\"is_draft\":1,\"page_views\":1,\"status\":1,\"created_at\":\"2022-03-14T08:08:23.000000Z\",\"updated_at\":\"2022-03-14T08:08:23.000000Z\",\"deleted_at\":null}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Media Posts Update.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/media-post\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/media-post\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "explicabo",
+                                    "description": "The ID of the media post."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"title\":\"Post Title\",\"summery\":\"Post Summery\",\"media_tag_id\":\"Post Media Tag\",\"seo_slug\":\"media-slug\",\"seo_ogp\":\"media-seo-ogp\",\"seo_featured_image\":\"media-seo_featured_image\",\"description\":\"media-description\",\"is_draft\":true,\"page_views\":1,\"status\":true}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"status\":\"Success\",\"message\":\"Updated Successfully\",\"code\":201,\"data\":{\"student_id\":\"1\",\"company_id\":\"1\",\"internship_post_id\":\"1\",\"cancel_status\":null,\"updated_at\":\"2022-03-10T16:30:14.000000Z\",\"created_at\":\"2022-03-10T16:30:14.000000Z\",\"id\":1}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Media Posts Delete.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/media-post\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/media-post\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"status\":\"Success\",\"message\":\"Deleted Successfully\",\"code\":200,\"data\":[]}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Students",
+            "description": "",
+            "item": [
+                {
+                    "name": "Student List.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/student",
+                            "query": [
+                                {
+                                    "key": "limit",
+                                    "value": "6",
+                                    "description": "optional Data Per Page Limit. Example : 10",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/student?limit=6"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":{\"message\":\"messages.show_all_success\",\"data\":[{\"id\":1,\"family_name\":\"minhaz\",\"first_name\":\"Ajamaef\",\"family_name_furigana\":\"demo\",\"first_name_furigana\":\"demo2\",\"email_valid\":\"demo@gtmail.com\",\"email_invalid\":\"demo@gtmail.com\",\"is_email_approved\":1,\"education_facility_id\":1,\"university_name\":\"rrrrrr\",\"graduate_year\":2020,\"graduate_month\":\"02\",\"self_introduction\":\"30\",\"status\":1,\"created_at\":\"2022-03-17T17:53:49.000000Z\",\"updated_at\":\"2022-03-17T17:53:49.000000Z\",\"deleted_at\":null,\"education_facilities\":{\"id\":1,\"name\":\"sdfds\",\"type\":0,\"created_at\":null,\"updated_at\":null,\"deleted_at\":null}},{\"id\":2,\"family_name\":\"minhaz\",\"first_name\":\"Ajamaef\",\"family_name_furigana\":\"demo\",\"first_name_furigana\":\"demo2\",\"email_valid\":\"demo@gtmail.com\",\"email_invalid\":\"demo@gtmail.com\",\"is_email_approved\":1,\"education_facility_id\":1,\"university_name\":\"rrrrrr\",\"graduate_year\":2020,\"graduate_month\":\"02\",\"self_introduction\":\"30\",\"status\":1,\"created_at\":\"2022-03-17T17:55:46.000000Z\",\"updated_at\":\"2022-03-17T17:55:46.000000Z\",\"deleted_at\":null,\"education_facilities\":{\"id\":1,\"name\":\"sdfds\",\"type\":0,\"created_at\":null,\"updated_at\":null,\"deleted_at\":null}},{\"id\":3,\"family_name\":\"minhaz\",\"first_name\":\"Ajamaef\",\"family_name_furigana\":\"demo\",\"first_name_furigana\":\"demo2\",\"email_valid\":\"demo@gtmail.com\",\"email_invalid\":\"demo@gtmail.com\",\"is_email_approved\":1,\"education_facility_id\":1,\"university_name\":\"rrrrrr\",\"graduate_year\":2020,\"graduate_month\":\"02\",\"self_introduction\":\"30\",\"status\":1,\"created_at\":\"2022-03-17T17:56:10.000000Z\",\"updated_at\":\"2022-03-17T17:56:10.000000Z\",\"deleted_at\":null,\"education_facilities\":{\"id\":1,\"name\":\"sdfds\",\"type\":0,\"created_at\":null,\"updated_at\":null,\"deleted_at\":null}}]}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Student Create.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/student",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/student"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"family_name\":\"Rayhan\",\"first_name\":\"Raju\",\"family_name_furigana\":\"ASD\",\"first_name_furigana\":\"XYZ\",\"email_valid\":\"devraju.bd@gmail.com\",\"email_invalid\":\"devraju.bd@gmail.com\",\"is_email_approved\":true,\"password\":\"12345678\",\"education_facility_id\":1,\"university_name\":\"Dhaka University\",\"graduate_year\":\"2016\",\"graduate_month\":\"02\",\"self_introduction\":\"Hello World\",\"status\":1,\"is_admin_read\":18}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"status\":\"Success\",\"message\":\"Created Successfully\",\"code\":201,\"data\":{\"family_name\":\"Rayhan\",\"first_name\":\"nbxgcjzbtafuiu\",\"family_name_furigana\":\"ktllbobqzviftazunfozppr\",\"first_name_furigana\":\"rlyenpaddbu\",\"email_valid\":\"ariane.corwin@example.net\",\"email_invalid\":\"herzog.joy@example.org\",\"is_email_approved\":true,\"education_facility_id\":\"1\",\"university_name\":\"commodi\",\"graduate_year\":null,\"graduate_month\":null,\"self_introduction\":\"culpa\",\"status\":null,\"updated_at\":\"2022-03-10T16:30:14.000000Z\",\"created_at\":\"2022-03-10T16:30:14.000000Z\",\"id\":1}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Student View.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/student\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/student\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":{\"message\":\"messages.data_found\",\"data\":{\"id\":1,\"family_name\":\"minhaz\",\"first_name\":\"Ajamaef\",\"family_name_furigana\":\"demo\",\"first_name_furigana\":\"demo2\",\"email_valid\":\"demo@gtmail.com\",\"email_invalid\":\"demo@gtmail.com\",\"is_email_approved\":1,\"education_facility_id\":1,\"university_name\":\"rrrrrr\",\"graduate_year\":2020,\"graduate_month\":\"02\",\"self_introduction\":\"30\",\"status\":1,\"created_at\":\"2022-03-17T17:53:49.000000Z\",\"updated_at\":\"2022-03-17T17:53:49.000000Z\",\"deleted_at\":null,\"education_facilities\":{\"id\":1,\"name\":\"sdfds\",\"type\":0,\"created_at\":null,\"updated_at\":null,\"deleted_at\":null}}}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Student Update.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/student\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/student\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"family_name\":\"Rayhan\",\"first_name\":\"Raju\",\"family_name_furigana\":\"ASD\",\"first_name_furigana\":\"XYZ\",\"email_valid\":\"devraju.bd@gmail.com\",\"email_invalid\":\"devraju.bd@gmail.com\",\"is_email_approved\":true,\"password\":\"12345678\",\"education_facility_id\":1,\"university_name\":\"Dhaka University\",\"graduate_year\":\"2016\",\"graduate_month\":\"02\",\"self_introduction\":\"Hello World\",\"status\":true,\"is_admin_read\":10}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":{\"message\":\"messages.update_success\",\"data\":{\"id\":1,\"family_name\":\"ddd\",\"first_name\":\"ddd\",\"family_name_furigana\":\"dddd\",\"first_name_furigana\":\"dddd\",\"email_valid\":\"dd@gmail.com\",\"email_invalid\":\"dddd@gmail.com\",\"is_email_approved\":\"1\",\"education_facility_id\":\"2\",\"university_name\":\"rrr\",\"graduate_year\":\"2022\",\"graduate_month\":\"02\",\"self_introduction\":\"erererer\",\"status\":\"1\",\"created_at\":\"2022-03-17T17:53:49.000000Z\",\"updated_at\":\"2022-03-17T18:08:25.000000Z\",\"deleted_at\":null}}}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "WorkCategory",
+            "description": "",
+            "item": [
+                {
+                    "name": "WorkCategory List.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/work-category",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/work-category"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"message\":\"Successfully fetched all records.\",\"data\":[{\"id\":51,\"name\":\"rere\",\"slug\":\"ererer\",\"created_at\":\"2022-03-17T05:30:58.000000Z\",\"updated_at\":\"2022-03-17T05:30:58.000000Z\",\"deleted_at\":null},{\"id\":52,\"name\":\"rereeeeee\",\"slug\":\"erererwerwerew\",\"created_at\":\"2022-03-17T06:05:27.000000Z\",\"updated_at\":\"2022-03-17T06:05:27.000000Z\",\"deleted_at\":null},{\"id\":54,\"name\":\"minhaz\",\"slug\":\"minhaz-slug\",\"created_at\":\"2022-03-17T06:30:59.000000Z\",\"updated_at\":\"2022-03-17T06:30:59.000000Z\",\"deleted_at\":null}]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "WorkCategory Create.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/work-category",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/work-category"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"demo name\",\"slug\":\"demo-slug\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"message\":\"The data has been saved successfully.\",\"data\":{\"name\":\"minhaz\",\"slug\":\"minhaz-slug\",\"updated_at\":\"2022-03-17T06:30:59.000000Z\",\"created_at\":\"2022-03-17T06:30:59.000000Z\",\"id\":54}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "WorkCategory View.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/work-category\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/work-category\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"message\":\"The record exists.\",\"data\":{\"id\":52,\"name\":\"rereeeeee\",\"slug\":\"erererwerwerew\",\"created_at\":\"2022-03-17T06:05:27.000000Z\",\"updated_at\":\"2022-03-17T06:05:27.000000Z\",\"deleted_at\":null}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "WorkCategory Update.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/work-category\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/work-category\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"demo name\",\"slug\":\"demo-slug\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"message\":\"The record has been updated successfully.\",\"data\":{\"id\":52,\"name\":\"demo\",\"slug\":\"demo-slug\",\"created_at\":\"2022-03-17T06:05:27.000000Z\",\"updated_at\":\"2022-03-17T07:21:33.000000Z\",\"deleted_at\":null}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "WorkCategory Delete.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/work-category\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/work-category\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"message\":\"The record has been deleted successfully.\"}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "noauth"
+    }
+}

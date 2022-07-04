@@ -1,0 +1,4981 @@
+openapi: 3.0.3
+info:
+  title: Kotonaru-web-user
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://127.0.0.1:8000'
+paths:
+  /api/application:
+    get:
+      summary: 'Application List.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    message: messages.show_all_success
+                    data:
+                      -
+                        id: 1
+                        student_id: 1
+                        company_id: 1
+                        internship_post_id: 1
+                        status: null
+                        cancel_status: 1
+                        created_at: '2022-03-25T09:23:22.000000Z'
+                        updated_at: '2022-03-25T09:23:22.000000Z'
+                        deleted_at: null
+                        student:
+                          id: 1
+                          family_name: minhaz
+                          first_name: Ahamed
+                          family_name_furigana: ''
+                          first_name_furigana: ''
+                          email_valid: demo@gmail.com
+                          email_invalid: null
+                          is_email_approved: 0
+                          education_facility_id: 1
+                          university_name: null
+                          graduate_year: null
+                          graduate_month: null
+                          self_introduction: null
+                          status: 1
+                          created_at: null
+                          updated_at: null
+                          deleted_at: null
+                        company:
+                          id: 1
+                          internal_company_id: demo
+                          name: www
+                          furigana_name: www
+                          logo_img: null
+                          business_industry_id: null
+                          office_address: null
+                          office_phone: null
+                          office_email1: null
+                          status: 1
+                          office_email2: null
+                          office_email3: null
+                          website_url: null
+                          client_liason: null
+                          admin_memo: null
+                          created_at: null
+                          updated_at: null
+                          deleted_at: null
+                        internship_post:
+                          id: 1
+                          title: sdfsdf
+                          company_id: 0
+                          business_industry_id: 0
+                          work_category_id: 0
+                          period: 0
+                          workload: 0
+                          internship_feature_id: 0
+                          application_step_1: null
+                          application_step_2: null
+                          application_step_3: null
+                          application_step_4: null
+                          seo_slug: null
+                          seo_ogp: null
+                          seo_meta_description: null
+                          seo_featured_image: null
+                          description_corporate_profile: null
+                          description_internship_content: null
+                          draft_or_public: null
+                          page_views: null
+                          status: null
+                          created_at: null
+                          updated_at: null
+                          deleted_at: null
+                          wage: 0
+                          target_grade: 0
+                          public_date: null
+                          display_order: null
+                properties:
+                  data:
+                    type: object
+                    example:
+                      message: messages.show_all_success
+                      data:
+                        -
+                          id: 1
+                          student_id: 1
+                          company_id: 1
+                          internship_post_id: 1
+                          status: null
+                          cancel_status: 1
+                          created_at: '2022-03-25T09:23:22.000000Z'
+                          updated_at: '2022-03-25T09:23:22.000000Z'
+                          deleted_at: null
+                          student:
+                            id: 1
+                            family_name: minhaz
+                            first_name: Ahamed
+                            family_name_furigana: ''
+                            first_name_furigana: ''
+                            email_valid: demo@gmail.com
+                            email_invalid: null
+                            is_email_approved: 0
+                            education_facility_id: 1
+                            university_name: null
+                            graduate_year: null
+                            graduate_month: null
+                            self_introduction: null
+                            status: 1
+                            created_at: null
+                            updated_at: null
+                            deleted_at: null
+                          company:
+                            id: 1
+                            internal_company_id: demo
+                            name: www
+                            furigana_name: www
+                            logo_img: null
+                            business_industry_id: null
+                            office_address: null
+                            office_phone: null
+                            office_email1: null
+                            status: 1
+                            office_email2: null
+                            office_email3: null
+                            website_url: null
+                            client_liason: null
+                            admin_memo: null
+                            created_at: null
+                            updated_at: null
+                            deleted_at: null
+                          internship_post:
+                            id: 1
+                            title: sdfsdf
+                            company_id: 0
+                            business_industry_id: 0
+                            work_category_id: 0
+                            period: 0
+                            workload: 0
+                            internship_feature_id: 0
+                            application_step_1: null
+                            application_step_2: null
+                            application_step_3: null
+                            application_step_4: null
+                            seo_slug: null
+                            seo_ogp: null
+                            seo_meta_description: null
+                            seo_featured_image: null
+                            description_corporate_profile: null
+                            description_internship_content: null
+                            draft_or_public: null
+                            page_views: null
+                            status: null
+                            created_at: null
+                            updated_at: null
+                            deleted_at: null
+                            wage: 0
+                            target_grade: 0
+                            public_date: null
+                            display_order: null
+      tags:
+        - Application
+      security: []
+    post:
+      summary: 'Application Create.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    message: messages.record_created_successfully
+                    data:
+                      student_id: '1'
+                      company_id: '1'
+                      internship_post_id: '1'
+                      cancel_status: '1'
+                      updated_at: '2022-03-25T09:23:22.000000Z'
+                      created_at: '2022-03-25T09:23:22.000000Z'
+                      id: 1
+                properties:
+                  data:
+                    type: object
+                    example:
+                      message: messages.record_created_successfully
+                      data:
+                        student_id: '1'
+                        company_id: '1'
+                        internship_post_id: '1'
+                        cancel_status: '1'
+                        updated_at: '2022-03-25T09:23:22.000000Z'
+                        created_at: '2022-03-25T09:23:22.000000Z'
+                        id: 1
+      tags:
+        - Application
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                student_id:
+                  type: integer
+                  description: ''
+                  example: 1
+                company_id:
+                  type: integer
+                  description: ''
+                  example: 1
+                internship_post_id:
+                  type: integer
+                  description: ''
+                  example: 1
+                status:
+                  type: integer
+                  description: ''
+                  example: 1
+                cancel_status:
+                  type: boolean
+                  description: ''
+                  example: true
+                is_admin_read:
+                  type: integer
+                  description: '0 for unread and 1 for read Example:'
+                  example: 3
+              required:
+                - status
+                - cancel_status
+      security: []
+  '/api/application/{id}':
+    get:
+      summary: 'Application View.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    message: messages.show_all_success
+                    data:
+                      -
+                        id: 1
+                        student_id: 1
+                        company_id: 1
+                        internship_post_id: 1
+                        status: null
+                        cancel_status: 1
+                        created_at: '2022-03-25T09:23:22.000000Z'
+                        updated_at: '2022-03-25T09:23:22.000000Z'
+                        deleted_at: null
+                        student:
+                          id: 1
+                          family_name: minhaz
+                          first_name: Ahamed
+                          family_name_furigana: ''
+                          first_name_furigana: ''
+                          email_valid: demo@gmail.com
+                          email_invalid: null
+                          is_email_approved: 0
+                          education_facility_id: 1
+                          university_name: null
+                          graduate_year: null
+                          graduate_month: null
+                          self_introduction: null
+                          status: 1
+                          created_at: null
+                          updated_at: null
+                          deleted_at: null
+                        company:
+                          id: 1
+                          internal_company_id: demo
+                          name: www
+                          furigana_name: www
+                          logo_img: null
+                          business_industry_id: null
+                          office_address: null
+                          office_phone: null
+                          office_email1: null
+                          status: 1
+                          office_email2: null
+                          office_email3: null
+                          website_url: null
+                          client_liason: null
+                          admin_memo: null
+                          created_at: null
+                          updated_at: null
+                          deleted_at: null
+                        internship_post:
+                          id: 1
+                          title: sdfsdf
+                          company_id: 0
+                          business_industry_id: 0
+                          work_category_id: 0
+                          period: 0
+                          workload: 0
+                          internship_feature_id: 0
+                          application_step_1: null
+                          application_step_2: null
+                          application_step_3: null
+                          application_step_4: null
+                          seo_slug: null
+                          seo_ogp: null
+                          seo_meta_description: null
+                          seo_featured_image: null
+                          description_corporate_profile: null
+                          description_internship_content: null
+                          draft_or_public: null
+                          page_views: null
+                          status: null
+                          created_at: null
+                          updated_at: null
+                          deleted_at: null
+                          wage: 0
+                          target_grade: 0
+                          public_date: null
+                          display_order: null
+                properties:
+                  data:
+                    type: object
+                    example:
+                      message: messages.show_all_success
+                      data:
+                        -
+                          id: 1
+                          student_id: 1
+                          company_id: 1
+                          internship_post_id: 1
+                          status: null
+                          cancel_status: 1
+                          created_at: '2022-03-25T09:23:22.000000Z'
+                          updated_at: '2022-03-25T09:23:22.000000Z'
+                          deleted_at: null
+                          student:
+                            id: 1
+                            family_name: minhaz
+                            first_name: Ahamed
+                            family_name_furigana: ''
+                            first_name_furigana: ''
+                            email_valid: demo@gmail.com
+                            email_invalid: null
+                            is_email_approved: 0
+                            education_facility_id: 1
+                            university_name: null
+                            graduate_year: null
+                            graduate_month: null
+                            self_introduction: null
+                            status: 1
+                            created_at: null
+                            updated_at: null
+                            deleted_at: null
+                          company:
+                            id: 1
+                            internal_company_id: demo
+                            name: www
+                            furigana_name: www
+                            logo_img: null
+                            business_industry_id: null
+                            office_address: null
+                            office_phone: null
+                            office_email1: null
+                            status: 1
+                            office_email2: null
+                            office_email3: null
+                            website_url: null
+                            client_liason: null
+                            admin_memo: null
+                            created_at: null
+                            updated_at: null
+                            deleted_at: null
+                          internship_post:
+                            id: 1
+                            title: sdfsdf
+                            company_id: 0
+                            business_industry_id: 0
+                            work_category_id: 0
+                            period: 0
+                            workload: 0
+                            internship_feature_id: 0
+                            application_step_1: null
+                            application_step_2: null
+                            application_step_3: null
+                            application_step_4: null
+                            seo_slug: null
+                            seo_ogp: null
+                            seo_meta_description: null
+                            seo_featured_image: null
+                            description_corporate_profile: null
+                            description_internship_content: null
+                            draft_or_public: null
+                            page_views: null
+                            status: null
+                            created_at: null
+                            updated_at: null
+                            deleted_at: null
+                            wage: 0
+                            target_grade: 0
+                            public_date: null
+                            display_order: null
+      tags:
+        - Application
+      security: []
+    put:
+      summary: 'Application Updatye.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    message: messages.update_success
+                    data:
+                      student_id: '1'
+                      company_id: '1'
+                      internship_post_id: '1'
+                      cancel_status: '1'
+                      updated_at: '2022-03-25T09:23:22.000000Z'
+                      created_at: '2022-03-25T09:23:22.000000Z'
+                      id: 1
+                properties:
+                  data:
+                    type: object
+                    example:
+                      message: messages.update_success
+                      data:
+                        student_id: '1'
+                        company_id: '1'
+                        internship_post_id: '1'
+                        cancel_status: '1'
+                        updated_at: '2022-03-25T09:23:22.000000Z'
+                        created_at: '2022-03-25T09:23:22.000000Z'
+                        id: 1
+      tags:
+        - Application
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                student_id:
+                  type: integer
+                  description: ''
+                  example: 1
+                company_id:
+                  type: integer
+                  description: ''
+                  example: 1
+                internship_post_id:
+                  type: integer
+                  description: ''
+                  example: 1
+                status:
+                  type: integer
+                  description: ''
+                  example: 1
+                cancel_status:
+                  type: boolean
+                  description: ''
+                  example: true
+                is_admin_read:
+                  type: integer
+                  description: '0 for unread and 1 for read Example:'
+                  example: 4
+              required:
+                - status
+                - cancel_status
+      security: []
+    delete:
+      summary: 'Application Delete.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'The record has been deleted successfully.'
+                properties:
+                  message:
+                    type: string
+                    example: 'The record has been deleted successfully.'
+      tags:
+        - Application
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: ''
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /api/student/password-reset:
+    post:
+      summary: 'Send Password Email For Student'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: '{''data'': {''message'':''Reset link sent toy your email''}}'
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email_valid:
+                  type: email
+                  description: ''
+                  example: student@domain.com
+              required:
+                - email_valid
+      security: []
+  /api/admin/password-reset:
+    post:
+      summary: 'Send Password Email For Admin'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: '{''data'': {''message'':''Reset link sent toy your email''} }'
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: email
+                  description: ''
+                  example: admin@domain.com
+              required:
+                - email
+      security: []
+  /api/education-facility:
+    get:
+      summary: 'EducationFacilities List.'
+      description: ''
+      parameters:
+        -
+          in: query
+          name: limit
+          description: 'optional Data Per Page Limit. Example : 10'
+          example: 19
+          required: false
+          schema:
+            type: integer
+            description: 'optional Data Per Page Limit. Example : 10'
+            example: 19
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    message: messages.show_all_success
+                    data:
+                      -
+                        id: 1
+                        name: sdfds
+                        type: 0
+                        created_at: null
+                        updated_at: null
+                        deleted_at: null
+                      -
+                        id: 2
+                        name: 'Celine Borer'
+                        type: 1
+                        created_at: '2022-03-17T17:17:38.000000Z'
+                        updated_at: '2022-03-17T17:17:38.000000Z'
+                        deleted_at: null
+                      -
+                        id: 3
+                        name: 'Alexander Steuber'
+                        type: 1
+                        created_at: '2022-03-17T17:17:38.000000Z'
+                        updated_at: '2022-03-17T17:17:38.000000Z'
+                        deleted_at: null
+                      -
+                        id: 4
+                        name: 'London Murray'
+                        type: 1
+                        created_at: '2022-03-17T17:17:38.000000Z'
+                        updated_at: '2022-03-17T17:17:38.000000Z'
+                        deleted_at: null
+                      -
+                        id: 5
+                        name: 'Jasen Haag V'
+                        type: 1
+                        created_at: '2022-03-17T17:17:38.000000Z'
+                        updated_at: '2022-03-17T17:17:38.000000Z'
+                        deleted_at: null
+                      -
+                        id: 6
+                        name: 'Florencio Gerlach'
+                        type: 1
+                        created_at: '2022-03-17T17:17:39.000000Z'
+                        updated_at: '2022-03-17T17:17:39.000000Z'
+                        deleted_at: null
+                      -
+                        id: 7
+                        name: 'Lori Carter'
+                        type: 1
+                        created_at: '2022-03-17T17:17:39.000000Z'
+                        updated_at: '2022-03-17T17:17:39.000000Z'
+                        deleted_at: null
+                      -
+                        id: 8
+                        name: 'Felicity Eichmann'
+                        type: 1
+                        created_at: '2022-03-17T17:17:39.000000Z'
+                        updated_at: '2022-03-17T17:17:39.000000Z'
+                        deleted_at: null
+                      -
+                        id: 9
+                        name: 'Gay Emmerich'
+                        type: 1
+                        created_at: '2022-03-17T17:17:39.000000Z'
+                        updated_at: '2022-03-17T17:17:39.000000Z'
+                        deleted_at: null
+                      -
+                        id: 10
+                        name: 'Nelda Lehner'
+                        type: 1
+                        created_at: '2022-03-17T17:17:39.000000Z'
+                        updated_at: '2022-03-17T17:17:39.000000Z'
+                        deleted_at: null
+                      -
+                        id: 11
+                        name: 'Prof. Kevin Senger'
+                        type: 1
+                        created_at: '2022-03-17T17:17:39.000000Z'
+                        updated_at: '2022-03-17T17:17:39.000000Z'
+                        deleted_at: null
+                properties:
+                  data:
+                    type: object
+                    example:
+                      message: messages.show_all_success
+                      data:
+                        -
+                          id: 1
+                          name: sdfds
+                          type: 0
+                          created_at: null
+                          updated_at: null
+                          deleted_at: null
+                        -
+                          id: 2
+                          name: 'Celine Borer'
+                          type: 1
+                          created_at: '2022-03-17T17:17:38.000000Z'
+                          updated_at: '2022-03-17T17:17:38.000000Z'
+                          deleted_at: null
+                        -
+                          id: 3
+                          name: 'Alexander Steuber'
+                          type: 1
+                          created_at: '2022-03-17T17:17:38.000000Z'
+                          updated_at: '2022-03-17T17:17:38.000000Z'
+                          deleted_at: null
+                        -
+                          id: 4
+                          name: 'London Murray'
+                          type: 1
+                          created_at: '2022-03-17T17:17:38.000000Z'
+                          updated_at: '2022-03-17T17:17:38.000000Z'
+                          deleted_at: null
+                        -
+                          id: 5
+                          name: 'Jasen Haag V'
+                          type: 1
+                          created_at: '2022-03-17T17:17:38.000000Z'
+                          updated_at: '2022-03-17T17:17:38.000000Z'
+                          deleted_at: null
+                        -
+                          id: 6
+                          name: 'Florencio Gerlach'
+                          type: 1
+                          created_at: '2022-03-17T17:17:39.000000Z'
+                          updated_at: '2022-03-17T17:17:39.000000Z'
+                          deleted_at: null
+                        -
+                          id: 7
+                          name: 'Lori Carter'
+                          type: 1
+                          created_at: '2022-03-17T17:17:39.000000Z'
+                          updated_at: '2022-03-17T17:17:39.000000Z'
+                          deleted_at: null
+                        -
+                          id: 8
+                          name: 'Felicity Eichmann'
+                          type: 1
+                          created_at: '2022-03-17T17:17:39.000000Z'
+                          updated_at: '2022-03-17T17:17:39.000000Z'
+                          deleted_at: null
+                        -
+                          id: 9
+                          name: 'Gay Emmerich'
+                          type: 1
+                          created_at: '2022-03-17T17:17:39.000000Z'
+                          updated_at: '2022-03-17T17:17:39.000000Z'
+                          deleted_at: null
+                        -
+                          id: 10
+                          name: 'Nelda Lehner'
+                          type: 1
+                          created_at: '2022-03-17T17:17:39.000000Z'
+                          updated_at: '2022-03-17T17:17:39.000000Z'
+                          deleted_at: null
+                        -
+                          id: 11
+                          name: 'Prof. Kevin Senger'
+                          type: 1
+                          created_at: '2022-03-17T17:17:39.000000Z'
+                          updated_at: '2022-03-17T17:17:39.000000Z'
+                          deleted_at: null
+      tags:
+        - EducationFacilities
+      security: []
+    post:
+      summary: 'EducationFacilities Create.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    message: messages.record_created_successfully
+                    data:
+                      name: asdsadas
+                      type: '1'
+                      updated_at: '2022-03-18T03:15:43.000000Z'
+                      created_at: '2022-03-18T03:15:43.000000Z'
+                      id: 12
+                properties:
+                  data:
+                    type: object
+                    example:
+                      message: messages.record_created_successfully
+                      data:
+                        name: asdsadas
+                        type: '1'
+                        updated_at: '2022-03-18T03:15:43.000000Z'
+                        created_at: '2022-03-18T03:15:43.000000Z'
+                        id: 12
+      tags:
+        - EducationFacilities
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: 'demo name'
+                type:
+                  type: number
+                  description: ''
+                  example: 1.0
+      security: []
+  '/api/education-facility/{id}':
+    get:
+      summary: 'EducationFacilities View.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    message: messages.data_found
+                    data:
+                      id: 1
+                      name: sdfds
+                      type: 0
+                      created_at: null
+                      updated_at: null
+                      deleted_at: null
+                properties:
+                  data:
+                    type: object
+                    example:
+                      message: messages.data_found
+                      data:
+                        id: 1
+                        name: sdfds
+                        type: 0
+                        created_at: null
+                        updated_at: null
+                        deleted_at: null
+      tags:
+        - EducationFacilities
+      security: []
+    put:
+      summary: 'EducationFacilities Update.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'The record has been updated successfully.'
+                  data:
+                    id: 52
+                    name: demo
+                    slug: demo-slug
+                    created_at: '2022-03-17T06:05:27.000000Z'
+                    updated_at: '2022-03-17T07:21:33.000000Z'
+                    deleted_at: null
+                properties:
+                  message:
+                    type: string
+                    example: 'The record has been updated successfully.'
+                  data:
+                    type: object
+                    example:
+                      id: 52
+                      name: demo
+                      slug: demo-slug
+                      created_at: '2022-03-17T06:05:27.000000Z'
+                      updated_at: '2022-03-17T07:21:33.000000Z'
+                      deleted_at: null
+      tags:
+        - EducationFacilities
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: 'demo name'
+                type:
+                  type: number
+                  description: 'Must not be greater than 2.'
+                  example: 1
+                slug:
+                  type: year
+                  description: ''
+                  example: demo-slug
+              required:
+                - type
+      security: []
+    delete:
+      summary: 'EducationFacilities Delete.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    message: messages.deleted_success
+                properties:
+                  data:
+                    type: object
+                    example:
+                      message: messages.deleted_success
+      tags:
+        - EducationFacilities
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: ''
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /api/master:
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    total_companies: 1
+                    total_companies_not_approved: 0
+                    work_categories:
+                      -
+                        id: 1
+                        name: 'demo category'
+                        slug: demo-category
+                        created_at: null
+                        updated_at: null
+                        deleted_at: null
+                    internship_feature_list:
+                      -
+                        id: 1
+                        name: CXO直下
+                      -
+                        id: 2
+                        name: 未経験OK
+                      -
+                        id: 3
+                        name: メンター在籍
+                      -
+                        id: 4
+                        name: 英語を使う
+                      -
+                        id: 5
+                        name: 高時給
+                      -
+                        id: 6
+                        name: 内定実績多数
+                    period:
+                      -
+                        id: 1
+                        name: 1ヶ月
+                      -
+                        id: 2
+                        name: 1〜3ヶ月
+                      -
+                        id: 3
+                        name: 3ヶ月〜
+                    wage:
+                      -
+                        id: 1
+                        name: '¥1,000〜'
+                      -
+                        id: 2
+                        name: '¥1,500〜'
+                      -
+                        id: 3
+                        name: '¥2,000〜'
+                    workload:
+                      -
+                        id: 1
+                        name: 10h未満/週
+                      -
+                        id: 2
+                        name: 10〜20h/週
+                      -
+                        id: 3
+                        name: 20h以上/週
+                    target_grade:
+                      -
+                        id: 1
+                        name: 1〜2年生
+                      -
+                        id: 2
+                        name: 1〜3年生
+                      -
+                        id: 3
+                        name: 学年問わず
+                properties:
+                  data:
+                    type: object
+                    example:
+                      total_companies: 1
+                      total_companies_not_approved: 0
+                      work_categories:
+                        -
+                          id: 1
+                          name: 'demo category'
+                          slug: demo-category
+                          created_at: null
+                          updated_at: null
+                          deleted_at: null
+                      internship_feature_list:
+                        -
+                          id: 1
+                          name: CXO直下
+                        -
+                          id: 2
+                          name: 未経験OK
+                        -
+                          id: 3
+                          name: メンター在籍
+                        -
+                          id: 4
+                          name: 英語を使う
+                        -
+                          id: 5
+                          name: 高時給
+                        -
+                          id: 6
+                          name: 内定実績多数
+                      period:
+                        -
+                          id: 1
+                          name: 1ヶ月
+                        -
+                          id: 2
+                          name: 1〜3ヶ月
+                        -
+                          id: 3
+                          name: 3ヶ月〜
+                      wage:
+                        -
+                          id: 1
+                          name: '¥1,000〜'
+                        -
+                          id: 2
+                          name: '¥1,500〜'
+                        -
+                          id: 3
+                          name: '¥2,000〜'
+                      workload:
+                        -
+                          id: 1
+                          name: 10h未満/週
+                        -
+                          id: 2
+                          name: 10〜20h/週
+                        -
+                          id: 3
+                          name: 20h以上/週
+                      target_grade:
+                        -
+                          id: 1
+                          name: 1〜2年生
+                        -
+                          id: 2
+                          name: 1〜3年生
+                        -
+                          id: 3
+                          name: 学年問わず
+      tags:
+        - Endpoints
+      security: []
+  /api/admin/log-in:
+    post:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: 'Must be a valid email address. Must not be greater than 50 characters.'
+                  example: vrgcwgprtojkomhqcm
+                password:
+                  type: string
+                  description: 'Must be at least 8 characters. Must not be greater than 20 characters.'
+                  example: fvbkajhxwjb
+              required:
+                - email
+                - password
+      security: []
+  /api/admin/create:
+    post:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                last_name:
+                  type: string
+                  description: 'Must not be greater than 20 characters.'
+                  example: lfezsleadabqz
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: sibyl98@example.com
+                password:
+                  type: string
+                  description: 'Must be at least 8 characters. Must not be greater than 20 characters.'
+                  example: pqdyj
+              required:
+                - last_name
+                - email
+                - password
+      security: []
+  /api/export/company:
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+  /api/admin:
+    get:
+      summary: 'Display a listing of the resource.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                last_name:
+                  type: string
+                  description: 'Must not be greater than 20 characters.'
+                  example: ''
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: breitenberg.alfredo@example.net
+                password:
+                  type: string
+                  description: 'Must be at least 8 characters. Must not be greater than 20 characters.'
+                  example: nfgvxvobiynla
+              required:
+                - last_name
+                - email
+                - password
+      security: []
+  '/api/admin/{id}':
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    put:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                last_name:
+                  type: string
+                  description: 'Must not be greater than 20 characters.'
+                  example: oepq
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: jaydon68@example.com
+                password:
+                  type: string
+                  description: 'Must be at least 8 characters. Must not be greater than 20 characters.'
+                  example: qgllwuzgejit
+                status:
+                  type: boolean
+                  description: ''
+                  example: false
+              required:
+                - last_name
+                - email
+                - password
+                - status
+      security: []
+    delete:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the admin.'
+        example: 5
+        required: true
+        schema:
+          type: integer
+  /api/media-tag:
+    get:
+      summary: 'Display a listing of the resource.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  '/api/media-tag/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    put:
+      summary: 'Update the specified resource in storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the media tag.'
+        example: assumenda
+        required: true
+        schema:
+          type: string
+  /api/internship-post:
+    get:
+      summary: 'Display a listing of the resource.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                paginate:
+                  type: integer
+                  description: ''
+                  example: 3
+                page:
+                  type: integer
+                  description: ''
+                  example: 12
+                sort:
+                  type: string
+                  description: 'Must be one of <code>id</code>, <code>name</code>, <code>email</code>, or <code>created_at</code>.'
+                  example: email
+                order:
+                  type: string
+                  description: 'This field is required when <code>sort</code> is present.  Must be one of <code>asc</code> or <code>desc</code>.'
+                  example: desc
+              required:
+                - paginate
+                - page
+                - sort
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: multipart/form-data
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: 'Must not be greater than 100 characters.'
+                  example: pxxhbuyualnzucvrwegqjpyumwqcagvdyoufcnylshkorhorzzcqfawsanhijuvycovmuphqax
+                company_id:
+                  type: number
+                  description: ''
+                  example: 7.69
+                work_category_id:
+                  type: number
+                  description: ''
+                  example: 29.33821457
+                period:
+                  type: number
+                  description: ''
+                  example: 4.36845
+                workload:
+                  type: number
+                  description: ''
+                  example: 258067.83
+                wage:
+                  type: number
+                  description: 'Must not be greater than 7.'
+                  example: 3
+                internship_feature_id:
+                  type: number
+                  description: ''
+                  example: 1.8
+                target_grade:
+                  type: number
+                  description: ''
+                  example: 129.318499
+                application_step_1:
+                  type: string
+                  description: 'Must not be greater than 30 characters.'
+                  example: ''
+                application_step_2:
+                  type: string
+                  description: 'Must not be greater than 30 characters.'
+                  example: chtpduzli
+                application_step_3:
+                  type: string
+                  description: 'Must not be greater than 30 characters.'
+                  example: ksydomknmvqbul
+                application_step_4:
+                  type: string
+                  description: 'Must not be greater than 30 characters.'
+                  example: vpechaxwiswfooblamau
+                seo_slug:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: ttcmkbrodwudgjiwqdukwcpbzzdnrdqrwkoikjwkidoyfgdqmlyzwmbffnqpdezvgrqukkiolrakceoifszlwostekpcwjzdkxrwssecrtyofjoticsvogjwkxxbftuvwgltwhyuxwqyszyswfiljzzpawapxbehtesajhibtdrzetgqafgshnnlomzd
+                seo_ogp:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: hjsoqgannvbcavoosxnitxefgihjzexuecfmkcxqbauidsjkisrrukzdvyfwcmtqgyuzivelyj
+                seo_meta_description:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: zoultassmulsxswvllmlrzbeqozjlqndilpexoeofxuuuquhkpxrlprpdrkeuaapfwxnhmctxmvjwklqrnkucwoprnaexdoictcwszjmppriglrzpiwzkprygrwadaojlpqrhwcsfxnfisuaspmhfdhggrwvsjgudlpnzrzqnviruftlujfjwseqdvklcqlkwzguldbmormzezpkbauxkwwfqecwidcloxzgxtwdsntenlglgwfusaqkbjo
+                seo_featured_image:
+                  type: string
+                  format: binary
+                  description: 'Must be an image. Must not be greater than 1024 kilobytes.'
+                description_corporate_profile:
+                  type: string
+                  description: ''
+                  example: blanditiis
+                description_internship_content:
+                  type: string
+                  description: ''
+                  example: ut
+                draft_or_public:
+                  type: boolean
+                  description: ''
+                  example: true
+                page_views:
+                  type: integer
+                  description: ''
+                  example: 15
+                status:
+                  type: boolean
+                  description: ''
+                  example: false
+                public_date:
+                  type: string
+                  description: 'Must be a valid date.'
+                  example: '2022-03-25T10:35:43'
+              required:
+                - title
+                - company_id
+                - work_category_id
+                - period
+                - workload
+                - wage
+                - target_grade
+                - application_step_1
+      security: []
+  '/api/internship-post/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    put:
+      summary: 'Update the specified resource in storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: multipart/form-data
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: 'Must not be greater than 100 characters.'
+                  example: xpyjsahfcfvkzwzyyjxcijlmyyhnjvqmvnzumagsgvtudtzoedlptoebnibocbofccwvtilndiahyfxvzfwqp
+                company_id:
+                  type: number
+                  description: ''
+                  example: 2701.5
+                work_category_id:
+                  type: number
+                  description: ''
+                  example: 701.14950999
+                period:
+                  type: number
+                  description: ''
+                  example: 43803038.669
+                workload:
+                  type: number
+                  description: ''
+                  example: 209.020614444
+                wage:
+                  type: number
+                  description: 'Must not be greater than 7.'
+                  example: 5
+                internship_feature_id:
+                  type: number
+                  description: ''
+                  example: 11152.36643
+                target_grade:
+                  type: number
+                  description: ''
+                  example: 2.90408141
+                application_step_1:
+                  type: string
+                  description: 'Must not be greater than 30 characters.'
+                  example: njs
+                application_step_2:
+                  type: string
+                  description: 'Must not be greater than 30 characters.'
+                  example: bvmltgidhjjuvdshhatj
+                application_step_3:
+                  type: string
+                  description: 'Must not be greater than 30 characters.'
+                  example: jzdszk
+                application_step_4:
+                  type: string
+                  description: 'Must not be greater than 30 characters.'
+                  example: qsgtkduqo
+                seo_slug:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: ukpswdpnzlhmijupssscyqecpmmgxhqukudktsvyjwepjdyvonwwexeflwainkqfbqwbfqdhbtkqiqgufnlxcrcxskyodgvavnuhlrjfjolpnmmjsupslhosnumdssxpyxpoiucszhmklkbgvqzkvvazaauspfqasqeviquotrjsdwwxzrqpbhcvgvodhq
+                seo_ogp:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: dbpfeagqyfryelzzzzmyoosqnydwjewgjwznarclcnktgnijqpbcppnnfq
+                seo_meta_description:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: qehzusmlcyaaebueaacukgzbnlyrwfptslukrxrcxpuyjsdadpcohzhmfzzagnbarqmyxyvrgdotimrywfuqfdbxpoxnlzvuhvekfbjipwskrclylxquzscvovpabapekivaacgefbxna
+                seo_featured_image:
+                  type: string
+                  format: binary
+                  description: 'Must be an image. Must not be greater than 1024 kilobytes.'
+                description_corporate_profile:
+                  type: string
+                  description: ''
+                  example: excepturi
+                description_internship_content:
+                  type: string
+                  description: ''
+                  example: fugiat
+                draft_or_public:
+                  type: boolean
+                  description: ''
+                  example: true
+                page_views:
+                  type: integer
+                  description: ''
+                  example: 4
+                status:
+                  type: boolean
+                  description: ''
+                  example: false
+                public_date:
+                  type: string
+                  description: 'Must be a valid date.'
+                  example: '2022-03-25T10:35:43'
+              required:
+                - title
+                - company_id
+                - work_category_id
+                - period
+                - workload
+                - wage
+                - target_grade
+                - application_step_1
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the internship post.'
+        example: aspernatur
+        required: true
+        schema:
+          type: string
+  /api/company:
+    get:
+      summary: 'Display a listing of the resource.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                business_industry_id:
+                  type: string
+                  description: ''
+                  example: null
+                internal_company_id:
+                  type: string
+                  description: ''
+                  example: maxime
+                name:
+                  type: string
+                  description: ''
+                  example: qui
+              required:
+                - internal_company_id
+                - name
+      security: []
+  '/api/company/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    put:
+      summary: 'Update the specified resource in storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                business_industry_id:
+                  type: string
+                  description: ''
+                  example: null
+                internal_company_id:
+                  type: string
+                  description: ''
+                  example: saepe
+                name:
+                  type: string
+                  description: ''
+                  example: animi
+              required:
+                - internal_company_id
+                - name
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the company.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /api/favorite:
+    get:
+      summary: 'Display a listing of the resource.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                student_id:
+                  type: integer
+                  description: ''
+                  example: 3
+                internship_post_id:
+                  type: integer
+                  description: ''
+                  example: 1
+                status:
+                  type: integer
+                  description: ''
+                  example: 16
+              required:
+                - student_id
+                - internship_post_id
+                - status
+      security: []
+  '/api/favorite/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the favorite.'
+        example: velit
+        required: true
+        schema:
+          type: string
+  /api/feedback:
+    get:
+      summary: 'Display a listing of the resource.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  '/api/feedback/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    put:
+      summary: 'Update the specified resource in storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the feedback.'
+        example: similique
+        required: true
+        schema:
+          type: string
+  /api/business_industry:
+    get:
+      summary: 'Display a listing of the resource.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  '/api/business_industry/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    put:
+      summary: 'Update the specified resource in storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the business industry.'
+        example: amet
+        required: true
+        schema:
+          type: string
+  /api/internship-feature:
+    get:
+      summary: 'InternshipFeatures List.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    message: messages.show_all_success
+                    data:
+                      -
+                        id: 1
+                        name: demo
+                        slug: demo-slug
+                        created_at: '2022-03-18T09:53:57.000000Z'
+                        updated_at: '2022-03-18T09:53:57.000000Z'
+                        deleted_at: null
+                      -
+                        id: 2
+                        name: demo1
+                        slug: demo-slug1
+                        created_at: '2022-03-18T09:54:19.000000Z'
+                        updated_at: '2022-03-18T09:54:19.000000Z'
+                        deleted_at: null
+                properties:
+                  data:
+                    type: object
+                    example:
+                      message: messages.show_all_success
+                      data:
+                        -
+                          id: 1
+                          name: demo
+                          slug: demo-slug
+                          created_at: '2022-03-18T09:53:57.000000Z'
+                          updated_at: '2022-03-18T09:53:57.000000Z'
+                          deleted_at: null
+                        -
+                          id: 2
+                          name: demo1
+                          slug: demo-slug1
+                          created_at: '2022-03-18T09:54:19.000000Z'
+                          updated_at: '2022-03-18T09:54:19.000000Z'
+                          deleted_at: null
+      tags:
+        - InternshipFeatures
+      security: []
+    post:
+      summary: 'InternshipFeatures Create.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    message: messages.record_created_successfully
+                    data:
+                      name: demo
+                      slug: demo-slug
+                      updated_at: '2022-03-18T09:53:57.000000Z'
+                      created_at: '2022-03-18T09:53:57.000000Z'
+                      id: 1
+                properties:
+                  data:
+                    type: object
+                    example:
+                      message: messages.record_created_successfully
+                      data:
+                        name: demo
+                        slug: demo-slug
+                        updated_at: '2022-03-18T09:53:57.000000Z'
+                        created_at: '2022-03-18T09:53:57.000000Z'
+                        id: 1
+      tags:
+        - InternshipFeatures
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: 'demo name'
+                slug:
+                  type: year
+                  description: ''
+                  example: demo-slug
+      security: []
+  '/api/internship-feature/{id}':
+    get:
+      summary: 'InternshipFeatures View.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'The record exists.'
+                  data:
+                    id: 52
+                    name: rereeeeee
+                    slug: erererwerwerew
+                    created_at: '2022-03-17T06:05:27.000000Z'
+                    updated_at: '2022-03-17T06:05:27.000000Z'
+                    deleted_at: null
+                properties:
+                  message:
+                    type: string
+                    example: 'The record exists.'
+                  data:
+                    type: object
+                    example:
+                      id: 52
+                      name: rereeeeee
+                      slug: erererwerwerew
+                      created_at: '2022-03-17T06:05:27.000000Z'
+                      updated_at: '2022-03-17T06:05:27.000000Z'
+                      deleted_at: null
+      tags:
+        - InternshipFeatures
+      security: []
+    put:
+      summary: 'InternshipFeatures Update.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    message: messages.update_success
+                    data:
+                      id: 1
+                      name: change
+                      slug: chage-demo
+                      created_at: '2022-03-18T09:53:57.000000Z'
+                      updated_at: '2022-03-18T09:55:20.000000Z'
+                      deleted_at: null
+                properties:
+                  data:
+                    type: object
+                    example:
+                      message: messages.update_success
+                      data:
+                        id: 1
+                        name: change
+                        slug: chage-demo
+                        created_at: '2022-03-18T09:53:57.000000Z'
+                        updated_at: '2022-03-18T09:55:20.000000Z'
+                        deleted_at: null
+      tags:
+        - InternshipFeatures
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: 'demo name'
+                slug:
+                  type: year
+                  description: ''
+                  example: demo-slug
+      security: []
+    delete:
+      summary: 'InternshipFeatures Delete.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    message: messages.deleted_success
+                properties:
+                  data:
+                    type: object
+                    example:
+                      message: messages.deleted_success
+      tags:
+        - InternshipFeatures
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: ''
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /api/media-posts:
+    get:
+      summary: 'Media Posts List.'
+      description: ''
+      parameters:
+        -
+          in: query
+          name: limit
+          description: 'optional Data Per Page Limit. Example : 10'
+          example: 9
+          required: false
+          schema:
+            type: integer
+            description: 'optional Data Per Page Limit. Example : 10'
+            example: 9
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: Success
+                  message: 'Media Posts List'
+                  code: 200
+                  data:
+                    current_page: 1
+                    data:
+                      -
+                        id: 1
+                        title: 'Post Title'
+                        summery: 'Post Summery'
+                        media_tag_id: 1
+                        seo_slug: media-slug
+                        seo_ogp: media-seo-ogp
+                        seo_featured_image: media-seo_featured_image
+                        description: media-description
+                        is_draft: 1
+                        page_views: 1
+                        status: 1
+                        created_at: '2022-03-14T08:08:23.000000Z'
+                        updated_at: '2022-03-14T08:08:23.000000Z'
+                        deleted_at: null
+                    first_page_url: 'http://localhost:8000/api/media-posts?page=1'
+                    from: 1
+                    last_page: 1
+                    last_page_url: 'http://localhost:8000/api/media-posts?page=1'
+                    links:
+                      -
+                        url: null
+                        label: '&laquo; Previous'
+                        active: false
+                      -
+                        url: 'http://localhost:8000/api/media-posts?page=1'
+                        label: '1'
+                        active: true
+                      -
+                        url: null
+                        label: 'Next &raquo;'
+                        active: false
+                    next_page_url: null
+                    path: 'http://localhost:8000/api/media-posts'
+                    per_page: '5'
+                    prev_page_url: null
+                    to: 1
+                    total: 1
+                properties:
+                  status:
+                    type: string
+                    example: Success
+                  message:
+                    type: string
+                    example: 'Media Posts List'
+                  code:
+                    type: integer
+                    example: 200
+                  data:
+                    type: object
+                    example:
+                      current_page: 1
+                      data:
+                        -
+                          id: 1
+                          title: 'Post Title'
+                          summery: 'Post Summery'
+                          media_tag_id: 1
+                          seo_slug: media-slug
+                          seo_ogp: media-seo-ogp
+                          seo_featured_image: media-seo_featured_image
+                          description: media-description
+                          is_draft: 1
+                          page_views: 1
+                          status: 1
+                          created_at: '2022-03-14T08:08:23.000000Z'
+                          updated_at: '2022-03-14T08:08:23.000000Z'
+                          deleted_at: null
+                      first_page_url: 'http://localhost:8000/api/media-posts?page=1'
+                      from: 1
+                      last_page: 1
+                      last_page_url: 'http://localhost:8000/api/media-posts?page=1'
+                      links:
+                        -
+                          url: null
+                          label: '&laquo; Previous'
+                          active: false
+                        -
+                          url: 'http://localhost:8000/api/media-posts?page=1'
+                          label: '1'
+                          active: true
+                        -
+                          url: null
+                          label: 'Next &raquo;'
+                          active: false
+                      next_page_url: null
+                      path: 'http://localhost:8000/api/media-posts'
+                      per_page: '5'
+                      prev_page_url: null
+                      to: 1
+                      total: 1
+      tags:
+        - 'Media Posts'
+      security: []
+    post:
+      summary: 'Media Posts Create.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: Success
+                  message: 'Created Successfully'
+                  code: 201
+                  data:
+                    title: 'Post Title'
+                    summery: 'Post Summery'
+                    media_tag_id: '1'
+                    seo_slug: media-slug
+                    seo_ogp: media-seo-ogp
+                    seo_featured_image: media-seo_featured_image
+                    description: media-description
+                    is_draft: true
+                    page_views: '1'
+                    status: true
+                    updated_at: '2022-03-14T08:07:25.000000Z'
+                    created_at: '2022-03-14T08:07:25.000000Z'
+                    id: 5
+                properties:
+                  status:
+                    type: string
+                    example: Success
+                  message:
+                    type: string
+                    example: 'Created Successfully'
+                  code:
+                    type: integer
+                    example: 201
+                  data:
+                    type: object
+                    example:
+                      title: 'Post Title'
+                      summery: 'Post Summery'
+                      media_tag_id: '1'
+                      seo_slug: media-slug
+                      seo_ogp: media-seo-ogp
+                      seo_featured_image: media-seo_featured_image
+                      description: media-description
+                      is_draft: true
+                      page_views: '1'
+                      status: true
+                      updated_at: '2022-03-14T08:07:25.000000Z'
+                      created_at: '2022-03-14T08:07:25.000000Z'
+                      id: 5
+      tags:
+        - 'Media Posts'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: ''
+                  example: 'Post Title'
+                summery:
+                  type: string
+                  description: ''
+                  example: 'Post Summery'
+                media_tag_id:
+                  type: string
+                  description: ''
+                  example: 'Post Media Tag'
+                seo_slug:
+                  type: string
+                  description: ''
+                  example: media-slug
+                seo_ogp:
+                  type: string
+                  description: ''
+                  example: media-seo-ogp
+                seo_featured_image:
+                  type: string
+                  description: ''
+                  example: media-seo_featured_image
+                description:
+                  type: string
+                  description: ''
+                  example: media-description
+                is_draft:
+                  type: boolean
+                  description: ''
+                  example: true
+                page_views:
+                  type: integer
+                  description: ''
+                  example: 1
+                status:
+                  type: boolean
+                  description: ''
+                  example: true
+              required:
+                - seo_slug
+                - seo_ogp
+                - seo_featured_image
+                - description
+                - is_draft
+                - page_views
+                - status
+      security: []
+  '/api/media-posts/{id}':
+    get:
+      summary: 'Media Posts View.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: Success
+                  message: 'Media Post View'
+                  code: 200
+                  data:
+                    id: 1
+                    title: 'Post Title'
+                    summery: 'Post Summery'
+                    media_tag_id: 1
+                    seo_slug: media-slug
+                    seo_ogp: media-seo-ogp
+                    seo_featured_image: media-seo_featured_image
+                    description: media-description
+                    is_draft: 1
+                    page_views: 1
+                    status: 1
+                    created_at: '2022-03-14T08:08:23.000000Z'
+                    updated_at: '2022-03-14T08:08:23.000000Z'
+                    deleted_at: null
+                properties:
+                  status:
+                    type: string
+                    example: Success
+                  message:
+                    type: string
+                    example: 'Media Post View'
+                  code:
+                    type: integer
+                    example: 200
+                  data:
+                    type: object
+                    example:
+                      id: 1
+                      title: 'Post Title'
+                      summery: 'Post Summery'
+                      media_tag_id: 1
+                      seo_slug: media-slug
+                      seo_ogp: media-seo-ogp
+                      seo_featured_image: media-seo_featured_image
+                      description: media-description
+                      is_draft: 1
+                      page_views: 1
+                      status: 1
+                      created_at: '2022-03-14T08:08:23.000000Z'
+                      updated_at: '2022-03-14T08:08:23.000000Z'
+                      deleted_at: null
+      tags:
+        - 'Media Posts'
+      security: []
+    put:
+      summary: 'Media Posts Update.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: Success
+                  message: 'Updated Successfully'
+                  code: 201
+                  data:
+                    student_id: '1'
+                    company_id: '1'
+                    internship_post_id: '1'
+                    cancel_status: null
+                    updated_at: '2022-03-10T16:30:14.000000Z'
+                    created_at: '2022-03-10T16:30:14.000000Z'
+                    id: 1
+                properties:
+                  status:
+                    type: string
+                    example: Success
+                  message:
+                    type: string
+                    example: 'Updated Successfully'
+                  code:
+                    type: integer
+                    example: 201
+                  data:
+                    type: object
+                    example:
+                      student_id: '1'
+                      company_id: '1'
+                      internship_post_id: '1'
+                      cancel_status: null
+                      updated_at: '2022-03-10T16:30:14.000000Z'
+                      created_at: '2022-03-10T16:30:14.000000Z'
+                      id: 1
+      tags:
+        - 'Media Posts'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: ''
+                  example: 'Post Title'
+                summery:
+                  type: string
+                  description: ''
+                  example: 'Post Summery'
+                media_tag_id:
+                  type: string
+                  description: ''
+                  example: 'Post Media Tag'
+                seo_slug:
+                  type: string
+                  description: ''
+                  example: media-slug
+                seo_ogp:
+                  type: string
+                  description: ''
+                  example: media-seo-ogp
+                seo_featured_image:
+                  type: string
+                  description: ''
+                  example: media-seo_featured_image
+                description:
+                  type: string
+                  description: ''
+                  example: media-description
+                is_draft:
+                  type: boolean
+                  description: ''
+                  example: true
+                page_views:
+                  type: integer
+                  description: ''
+                  example: 1
+                status:
+                  type: boolean
+                  description: ''
+                  example: true
+              required:
+                - seo_slug
+                - seo_ogp
+                - seo_featured_image
+                - description
+                - is_draft
+                - page_views
+                - status
+      security: []
+    delete:
+      summary: 'Media Posts Delete.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: Success
+                  message: 'Deleted Successfully'
+                  code: 200
+                  data: []
+                properties:
+                  status:
+                    type: string
+                    example: Success
+                  message:
+                    type: string
+                    example: 'Deleted Successfully'
+                  code:
+                    type: integer
+                    example: 200
+                  data:
+                    type: array
+                    example: []
+      tags:
+        - 'Media Posts'
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: ''
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /api/media-post:
+    get:
+      summary: 'Media Posts List.'
+      description: ''
+      parameters:
+        -
+          in: query
+          name: limit
+          description: 'optional Data Per Page Limit. Example : 10'
+          example: 9
+          required: false
+          schema:
+            type: integer
+            description: 'optional Data Per Page Limit. Example : 10'
+            example: 9
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: Success
+                  message: 'Media Posts List'
+                  code: 200
+                  data:
+                    current_page: 1
+                    data:
+                      -
+                        id: 1
+                        title: 'Post Title'
+                        summery: 'Post Summery'
+                        media_tag_id: 1
+                        seo_slug: media-slug
+                        seo_ogp: media-seo-ogp
+                        seo_featured_image: media-seo_featured_image
+                        description: media-description
+                        is_draft: 1
+                        page_views: 1
+                        status: 1
+                        created_at: '2022-03-14T08:08:23.000000Z'
+                        updated_at: '2022-03-14T08:08:23.000000Z'
+                        deleted_at: null
+                    first_page_url: 'http://localhost:8000/api/media-posts?page=1'
+                    from: 1
+                    last_page: 1
+                    last_page_url: 'http://localhost:8000/api/media-posts?page=1'
+                    links:
+                      -
+                        url: null
+                        label: '&laquo; Previous'
+                        active: false
+                      -
+                        url: 'http://localhost:8000/api/media-posts?page=1'
+                        label: '1'
+                        active: true
+                      -
+                        url: null
+                        label: 'Next &raquo;'
+                        active: false
+                    next_page_url: null
+                    path: 'http://localhost:8000/api/media-posts'
+                    per_page: '5'
+                    prev_page_url: null
+                    to: 1
+                    total: 1
+                properties:
+                  status:
+                    type: string
+                    example: Success
+                  message:
+                    type: string
+                    example: 'Media Posts List'
+                  code:
+                    type: integer
+                    example: 200
+                  data:
+                    type: object
+                    example:
+                      current_page: 1
+                      data:
+                        -
+                          id: 1
+                          title: 'Post Title'
+                          summery: 'Post Summery'
+                          media_tag_id: 1
+                          seo_slug: media-slug
+                          seo_ogp: media-seo-ogp
+                          seo_featured_image: media-seo_featured_image
+                          description: media-description
+                          is_draft: 1
+                          page_views: 1
+                          status: 1
+                          created_at: '2022-03-14T08:08:23.000000Z'
+                          updated_at: '2022-03-14T08:08:23.000000Z'
+                          deleted_at: null
+                      first_page_url: 'http://localhost:8000/api/media-posts?page=1'
+                      from: 1
+                      last_page: 1
+                      last_page_url: 'http://localhost:8000/api/media-posts?page=1'
+                      links:
+                        -
+                          url: null
+                          label: '&laquo; Previous'
+                          active: false
+                        -
+                          url: 'http://localhost:8000/api/media-posts?page=1'
+                          label: '1'
+                          active: true
+                        -
+                          url: null
+                          label: 'Next &raquo;'
+                          active: false
+                      next_page_url: null
+                      path: 'http://localhost:8000/api/media-posts'
+                      per_page: '5'
+                      prev_page_url: null
+                      to: 1
+                      total: 1
+      tags:
+        - 'Media Posts'
+      security: []
+    post:
+      summary: 'Media Posts Create.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: Success
+                  message: 'Created Successfully'
+                  code: 201
+                  data:
+                    title: 'Post Title'
+                    summery: 'Post Summery'
+                    media_tag_id: '1'
+                    seo_slug: media-slug
+                    seo_ogp: media-seo-ogp
+                    seo_featured_image: media-seo_featured_image
+                    description: media-description
+                    is_draft: true
+                    page_views: '1'
+                    status: true
+                    updated_at: '2022-03-14T08:07:25.000000Z'
+                    created_at: '2022-03-14T08:07:25.000000Z'
+                    id: 5
+                properties:
+                  status:
+                    type: string
+                    example: Success
+                  message:
+                    type: string
+                    example: 'Created Successfully'
+                  code:
+                    type: integer
+                    example: 201
+                  data:
+                    type: object
+                    example:
+                      title: 'Post Title'
+                      summery: 'Post Summery'
+                      media_tag_id: '1'
+                      seo_slug: media-slug
+                      seo_ogp: media-seo-ogp
+                      seo_featured_image: media-seo_featured_image
+                      description: media-description
+                      is_draft: true
+                      page_views: '1'
+                      status: true
+                      updated_at: '2022-03-14T08:07:25.000000Z'
+                      created_at: '2022-03-14T08:07:25.000000Z'
+                      id: 5
+      tags:
+        - 'Media Posts'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: ''
+                  example: 'Post Title'
+                summery:
+                  type: string
+                  description: ''
+                  example: 'Post Summery'
+                media_tag_id:
+                  type: string
+                  description: ''
+                  example: 'Post Media Tag'
+                seo_slug:
+                  type: string
+                  description: ''
+                  example: media-slug
+                seo_ogp:
+                  type: string
+                  description: ''
+                  example: media-seo-ogp
+                seo_featured_image:
+                  type: string
+                  description: ''
+                  example: media-seo_featured_image
+                description:
+                  type: string
+                  description: ''
+                  example: media-description
+                is_draft:
+                  type: boolean
+                  description: ''
+                  example: true
+                page_views:
+                  type: integer
+                  description: ''
+                  example: 1
+                status:
+                  type: boolean
+                  description: ''
+                  example: true
+              required:
+                - seo_slug
+                - seo_ogp
+                - seo_featured_image
+                - description
+                - is_draft
+                - page_views
+                - status
+      security: []
+  '/api/media-post/{id}':
+    get:
+      summary: 'Media Posts View.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: Success
+                  message: 'Media Post View'
+                  code: 200
+                  data:
+                    id: 1
+                    title: 'Post Title'
+                    summery: 'Post Summery'
+                    media_tag_id: 1
+                    seo_slug: media-slug
+                    seo_ogp: media-seo-ogp
+                    seo_featured_image: media-seo_featured_image
+                    description: media-description
+                    is_draft: 1
+                    page_views: 1
+                    status: 1
+                    created_at: '2022-03-14T08:08:23.000000Z'
+                    updated_at: '2022-03-14T08:08:23.000000Z'
+                    deleted_at: null
+                properties:
+                  status:
+                    type: string
+                    example: Success
+                  message:
+                    type: string
+                    example: 'Media Post View'
+                  code:
+                    type: integer
+                    example: 200
+                  data:
+                    type: object
+                    example:
+                      id: 1
+                      title: 'Post Title'
+                      summery: 'Post Summery'
+                      media_tag_id: 1
+                      seo_slug: media-slug
+                      seo_ogp: media-seo-ogp
+                      seo_featured_image: media-seo_featured_image
+                      description: media-description
+                      is_draft: 1
+                      page_views: 1
+                      status: 1
+                      created_at: '2022-03-14T08:08:23.000000Z'
+                      updated_at: '2022-03-14T08:08:23.000000Z'
+                      deleted_at: null
+      tags:
+        - 'Media Posts'
+      security: []
+    put:
+      summary: 'Media Posts Update.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: Success
+                  message: 'Updated Successfully'
+                  code: 201
+                  data:
+                    student_id: '1'
+                    company_id: '1'
+                    internship_post_id: '1'
+                    cancel_status: null
+                    updated_at: '2022-03-10T16:30:14.000000Z'
+                    created_at: '2022-03-10T16:30:14.000000Z'
+                    id: 1
+                properties:
+                  status:
+                    type: string
+                    example: Success
+                  message:
+                    type: string
+                    example: 'Updated Successfully'
+                  code:
+                    type: integer
+                    example: 201
+                  data:
+                    type: object
+                    example:
+                      student_id: '1'
+                      company_id: '1'
+                      internship_post_id: '1'
+                      cancel_status: null
+                      updated_at: '2022-03-10T16:30:14.000000Z'
+                      created_at: '2022-03-10T16:30:14.000000Z'
+                      id: 1
+      tags:
+        - 'Media Posts'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: ''
+                  example: 'Post Title'
+                summery:
+                  type: string
+                  description: ''
+                  example: 'Post Summery'
+                media_tag_id:
+                  type: string
+                  description: ''
+                  example: 'Post Media Tag'
+                seo_slug:
+                  type: string
+                  description: ''
+                  example: media-slug
+                seo_ogp:
+                  type: string
+                  description: ''
+                  example: media-seo-ogp
+                seo_featured_image:
+                  type: string
+                  description: ''
+                  example: media-seo_featured_image
+                description:
+                  type: string
+                  description: ''
+                  example: media-description
+                is_draft:
+                  type: boolean
+                  description: ''
+                  example: true
+                page_views:
+                  type: integer
+                  description: ''
+                  example: 1
+                status:
+                  type: boolean
+                  description: ''
+                  example: true
+              required:
+                - seo_slug
+                - seo_ogp
+                - seo_featured_image
+                - description
+                - is_draft
+                - page_views
+                - status
+      security: []
+    delete:
+      summary: 'Media Posts Delete.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: Success
+                  message: 'Deleted Successfully'
+                  code: 200
+                  data: []
+                properties:
+                  status:
+                    type: string
+                    example: Success
+                  message:
+                    type: string
+                    example: 'Deleted Successfully'
+                  code:
+                    type: integer
+                    example: 200
+                  data:
+                    type: array
+                    example: []
+      tags:
+        - 'Media Posts'
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: ''
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /api/student:
+    get:
+      summary: 'Student List.'
+      description: ''
+      parameters:
+        -
+          in: query
+          name: limit
+          description: 'optional Data Per Page Limit. Example : 10'
+          example: 6
+          required: false
+          schema:
+            type: integer
+            description: 'optional Data Per Page Limit. Example : 10'
+            example: 6
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    message: messages.show_all_success
+                    data:
+                      -
+                        id: 1
+                        family_name: minhaz
+                        first_name: Ajamaef
+                        family_name_furigana: demo
+                        first_name_furigana: demo2
+                        email_valid: demo@gtmail.com
+                        email_invalid: demo@gtmail.com
+                        is_email_approved: 1
+                        education_facility_id: 1
+                        university_name: rrrrrr
+                        graduate_year: 2020
+                        graduate_month: '02'
+                        self_introduction: '30'
+                        status: 1
+                        created_at: '2022-03-17T17:53:49.000000Z'
+                        updated_at: '2022-03-17T17:53:49.000000Z'
+                        deleted_at: null
+                        education_facilities:
+                          id: 1
+                          name: sdfds
+                          type: 0
+                          created_at: null
+                          updated_at: null
+                          deleted_at: null
+                      -
+                        id: 2
+                        family_name: minhaz
+                        first_name: Ajamaef
+                        family_name_furigana: demo
+                        first_name_furigana: demo2
+                        email_valid: demo@gtmail.com
+                        email_invalid: demo@gtmail.com
+                        is_email_approved: 1
+                        education_facility_id: 1
+                        university_name: rrrrrr
+                        graduate_year: 2020
+                        graduate_month: '02'
+                        self_introduction: '30'
+                        status: 1
+                        created_at: '2022-03-17T17:55:46.000000Z'
+                        updated_at: '2022-03-17T17:55:46.000000Z'
+                        deleted_at: null
+                        education_facilities:
+                          id: 1
+                          name: sdfds
+                          type: 0
+                          created_at: null
+                          updated_at: null
+                          deleted_at: null
+                      -
+                        id: 3
+                        family_name: minhaz
+                        first_name: Ajamaef
+                        family_name_furigana: demo
+                        first_name_furigana: demo2
+                        email_valid: demo@gtmail.com
+                        email_invalid: demo@gtmail.com
+                        is_email_approved: 1
+                        education_facility_id: 1
+                        university_name: rrrrrr
+                        graduate_year: 2020
+                        graduate_month: '02'
+                        self_introduction: '30'
+                        status: 1
+                        created_at: '2022-03-17T17:56:10.000000Z'
+                        updated_at: '2022-03-17T17:56:10.000000Z'
+                        deleted_at: null
+                        education_facilities:
+                          id: 1
+                          name: sdfds
+                          type: 0
+                          created_at: null
+                          updated_at: null
+                          deleted_at: null
+                properties:
+                  data:
+                    type: object
+                    example:
+                      message: messages.show_all_success
+                      data:
+                        -
+                          id: 1
+                          family_name: minhaz
+                          first_name: Ajamaef
+                          family_name_furigana: demo
+                          first_name_furigana: demo2
+                          email_valid: demo@gtmail.com
+                          email_invalid: demo@gtmail.com
+                          is_email_approved: 1
+                          education_facility_id: 1
+                          university_name: rrrrrr
+                          graduate_year: 2020
+                          graduate_month: '02'
+                          self_introduction: '30'
+                          status: 1
+                          created_at: '2022-03-17T17:53:49.000000Z'
+                          updated_at: '2022-03-17T17:53:49.000000Z'
+                          deleted_at: null
+                          education_facilities:
+                            id: 1
+                            name: sdfds
+                            type: 0
+                            created_at: null
+                            updated_at: null
+                            deleted_at: null
+                        -
+                          id: 2
+                          family_name: minhaz
+                          first_name: Ajamaef
+                          family_name_furigana: demo
+                          first_name_furigana: demo2
+                          email_valid: demo@gtmail.com
+                          email_invalid: demo@gtmail.com
+                          is_email_approved: 1
+                          education_facility_id: 1
+                          university_name: rrrrrr
+                          graduate_year: 2020
+                          graduate_month: '02'
+                          self_introduction: '30'
+                          status: 1
+                          created_at: '2022-03-17T17:55:46.000000Z'
+                          updated_at: '2022-03-17T17:55:46.000000Z'
+                          deleted_at: null
+                          education_facilities:
+                            id: 1
+                            name: sdfds
+                            type: 0
+                            created_at: null
+                            updated_at: null
+                            deleted_at: null
+                        -
+                          id: 3
+                          family_name: minhaz
+                          first_name: Ajamaef
+                          family_name_furigana: demo
+                          first_name_furigana: demo2
+                          email_valid: demo@gtmail.com
+                          email_invalid: demo@gtmail.com
+                          is_email_approved: 1
+                          education_facility_id: 1
+                          university_name: rrrrrr
+                          graduate_year: 2020
+                          graduate_month: '02'
+                          self_introduction: '30'
+                          status: 1
+                          created_at: '2022-03-17T17:56:10.000000Z'
+                          updated_at: '2022-03-17T17:56:10.000000Z'
+                          deleted_at: null
+                          education_facilities:
+                            id: 1
+                            name: sdfds
+                            type: 0
+                            created_at: null
+                            updated_at: null
+                            deleted_at: null
+      tags:
+        - Students
+      security: []
+    post:
+      summary: 'Student Create.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: Success
+                  message: 'Created Successfully'
+                  code: 201
+                  data:
+                    family_name: Rayhan
+                    first_name: nbxgcjzbtafuiu
+                    family_name_furigana: ktllbobqzviftazunfozppr
+                    first_name_furigana: rlyenpaddbu
+                    email_valid: ariane.corwin@example.net
+                    email_invalid: herzog.joy@example.org
+                    is_email_approved: true
+                    education_facility_id: '1'
+                    university_name: commodi
+                    graduate_year: null
+                    graduate_month: null
+                    self_introduction: culpa
+                    status: null
+                    updated_at: '2022-03-10T16:30:14.000000Z'
+                    created_at: '2022-03-10T16:30:14.000000Z'
+                    id: 1
+                properties:
+                  status:
+                    type: string
+                    example: Success
+                  message:
+                    type: string
+                    example: 'Created Successfully'
+                  code:
+                    type: integer
+                    example: 201
+                  data:
+                    type: object
+                    example:
+                      family_name: Rayhan
+                      first_name: nbxgcjzbtafuiu
+                      family_name_furigana: ktllbobqzviftazunfozppr
+                      first_name_furigana: rlyenpaddbu
+                      email_valid: ariane.corwin@example.net
+                      email_invalid: herzog.joy@example.org
+                      is_email_approved: true
+                      education_facility_id: '1'
+                      university_name: commodi
+                      graduate_year: null
+                      graduate_month: null
+                      self_introduction: culpa
+                      status: null
+                      updated_at: '2022-03-10T16:30:14.000000Z'
+                      created_at: '2022-03-10T16:30:14.000000Z'
+                      id: 1
+      tags:
+        - Students
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                family_name:
+                  type: string
+                  description: ''
+                  example: Rayhan
+                first_name:
+                  type: string
+                  description: ''
+                  example: Raju
+                family_name_furigana:
+                  type: string
+                  description: ''
+                  example: ASD
+                first_name_furigana:
+                  type: string
+                  description: ''
+                  example: XYZ
+                email_valid:
+                  type: email
+                  description: ''
+                  example: devraju.bd@gmail.com
+                email_invalid:
+                  type: email
+                  description: ''
+                  example: devraju.bd@gmail.com
+                is_email_approved:
+                  type: boolean
+                  description: ''
+                  example: true
+                password:
+                  type: string
+                  description: ''
+                  example: '12345678'
+                education_facility_id:
+                  type: integer
+                  description: ''
+                  example: 1
+                university_name:
+                  type: string
+                  description: ''
+                  example: 'Dhaka University'
+                graduate_year:
+                  type: year
+                  description: ''
+                  example: '2016'
+                graduate_month:
+                  type: string
+                  description: ''
+                  example: '02'
+                self_introduction:
+                  type: string
+                  description: ''
+                  example: 'Hello World'
+                status:
+                  type: integer
+                  description: ''
+                  example: 1
+                is_admin_read:
+                  type: integer
+                  description: '0 for unread and 1 for read Example:'
+                  example: 18
+              required:
+                - family_name
+                - first_name
+                - family_name_furigana
+                - first_name_furigana
+                - email_valid
+                - email_invalid
+                - is_email_approved
+                - password
+      security: []
+  '/api/student/{id}':
+    get:
+      summary: 'Student View.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    message: messages.data_found
+                    data:
+                      id: 1
+                      family_name: minhaz
+                      first_name: Ajamaef
+                      family_name_furigana: demo
+                      first_name_furigana: demo2
+                      email_valid: demo@gtmail.com
+                      email_invalid: demo@gtmail.com
+                      is_email_approved: 1
+                      education_facility_id: 1
+                      university_name: rrrrrr
+                      graduate_year: 2020
+                      graduate_month: '02'
+                      self_introduction: '30'
+                      status: 1
+                      created_at: '2022-03-17T17:53:49.000000Z'
+                      updated_at: '2022-03-17T17:53:49.000000Z'
+                      deleted_at: null
+                      education_facilities:
+                        id: 1
+                        name: sdfds
+                        type: 0
+                        created_at: null
+                        updated_at: null
+                        deleted_at: null
+                properties:
+                  data:
+                    type: object
+                    example:
+                      message: messages.data_found
+                      data:
+                        id: 1
+                        family_name: minhaz
+                        first_name: Ajamaef
+                        family_name_furigana: demo
+                        first_name_furigana: demo2
+                        email_valid: demo@gtmail.com
+                        email_invalid: demo@gtmail.com
+                        is_email_approved: 1
+                        education_facility_id: 1
+                        university_name: rrrrrr
+                        graduate_year: 2020
+                        graduate_month: '02'
+                        self_introduction: '30'
+                        status: 1
+                        created_at: '2022-03-17T17:53:49.000000Z'
+                        updated_at: '2022-03-17T17:53:49.000000Z'
+                        deleted_at: null
+                        education_facilities:
+                          id: 1
+                          name: sdfds
+                          type: 0
+                          created_at: null
+                          updated_at: null
+                          deleted_at: null
+      tags:
+        - Students
+      security: []
+    put:
+      summary: 'Student Update.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    message: messages.update_success
+                    data:
+                      id: 1
+                      family_name: ddd
+                      first_name: ddd
+                      family_name_furigana: dddd
+                      first_name_furigana: dddd
+                      email_valid: dd@gmail.com
+                      email_invalid: dddd@gmail.com
+                      is_email_approved: '1'
+                      education_facility_id: '2'
+                      university_name: rrr
+                      graduate_year: '2022'
+                      graduate_month: '02'
+                      self_introduction: erererer
+                      status: '1'
+                      created_at: '2022-03-17T17:53:49.000000Z'
+                      updated_at: '2022-03-17T18:08:25.000000Z'
+                      deleted_at: null
+                properties:
+                  data:
+                    type: object
+                    example:
+                      message: messages.update_success
+                      data:
+                        id: 1
+                        family_name: ddd
+                        first_name: ddd
+                        family_name_furigana: dddd
+                        first_name_furigana: dddd
+                        email_valid: dd@gmail.com
+                        email_invalid: dddd@gmail.com
+                        is_email_approved: '1'
+                        education_facility_id: '2'
+                        university_name: rrr
+                        graduate_year: '2022'
+                        graduate_month: '02'
+                        self_introduction: erererer
+                        status: '1'
+                        created_at: '2022-03-17T17:53:49.000000Z'
+                        updated_at: '2022-03-17T18:08:25.000000Z'
+                        deleted_at: null
+      tags:
+        - Students
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                family_name:
+                  type: string
+                  description: ''
+                  example: Rayhan
+                first_name:
+                  type: string
+                  description: ''
+                  example: Raju
+                family_name_furigana:
+                  type: string
+                  description: ''
+                  example: ASD
+                first_name_furigana:
+                  type: string
+                  description: ''
+                  example: XYZ
+                email_valid:
+                  type: email
+                  description: ''
+                  example: devraju.bd@gmail.com
+                email_invalid:
+                  type: email
+                  description: ''
+                  example: devraju.bd@gmail.com
+                is_email_approved:
+                  type: boolean
+                  description: ''
+                  example: true
+                password:
+                  type: string
+                  description: ''
+                  example: '12345678'
+                education_facility_id:
+                  type: integer
+                  description: ''
+                  example: 1
+                university_name:
+                  type: string
+                  description: ''
+                  example: 'Dhaka University'
+                graduate_year:
+                  type: year
+                  description: ''
+                  example: '2016'
+                graduate_month:
+                  type: string
+                  description: ''
+                  example: '02'
+                self_introduction:
+                  type: string
+                  description: ''
+                  example: 'Hello World'
+                status:
+                  type: boolean
+                  description: ''
+                  example: true
+                is_admin_read:
+                  type: integer
+                  description: ''
+                  example: 10
+              required:
+                - family_name
+                - first_name
+                - family_name_furigana
+                - first_name_furigana
+                - email_valid
+                - email_invalid
+                - is_email_approved
+                - password
+                - status
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: ''
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /api/work-category:
+    get:
+      summary: 'WorkCategory List.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Successfully fetched all records.'
+                  data:
+                    -
+                      id: 51
+                      name: rere
+                      slug: ererer
+                      created_at: '2022-03-17T05:30:58.000000Z'
+                      updated_at: '2022-03-17T05:30:58.000000Z'
+                      deleted_at: null
+                    -
+                      id: 52
+                      name: rereeeeee
+                      slug: erererwerwerew
+                      created_at: '2022-03-17T06:05:27.000000Z'
+                      updated_at: '2022-03-17T06:05:27.000000Z'
+                      deleted_at: null
+                    -
+                      id: 54
+                      name: minhaz
+                      slug: minhaz-slug
+                      created_at: '2022-03-17T06:30:59.000000Z'
+                      updated_at: '2022-03-17T06:30:59.000000Z'
+                      deleted_at: null
+                properties:
+                  message:
+                    type: string
+                    example: 'Successfully fetched all records.'
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 51
+                        name: rere
+                        slug: ererer
+                        created_at: '2022-03-17T05:30:58.000000Z'
+                        updated_at: '2022-03-17T05:30:58.000000Z'
+                        deleted_at: null
+                      -
+                        id: 52
+                        name: rereeeeee
+                        slug: erererwerwerew
+                        created_at: '2022-03-17T06:05:27.000000Z'
+                        updated_at: '2022-03-17T06:05:27.000000Z'
+                        deleted_at: null
+                      -
+                        id: 54
+                        name: minhaz
+                        slug: minhaz-slug
+                        created_at: '2022-03-17T06:30:59.000000Z'
+                        updated_at: '2022-03-17T06:30:59.000000Z'
+                        deleted_at: null
+                    items:
+                      type: object
+      tags:
+        - WorkCategory
+      security: []
+    post:
+      summary: 'WorkCategory Create.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'The data has been saved successfully.'
+                  data:
+                    name: minhaz
+                    slug: minhaz-slug
+                    updated_at: '2022-03-17T06:30:59.000000Z'
+                    created_at: '2022-03-17T06:30:59.000000Z'
+                    id: 54
+                properties:
+                  message:
+                    type: string
+                    example: 'The data has been saved successfully.'
+                  data:
+                    type: object
+                    example:
+                      name: minhaz
+                      slug: minhaz-slug
+                      updated_at: '2022-03-17T06:30:59.000000Z'
+                      created_at: '2022-03-17T06:30:59.000000Z'
+                      id: 54
+      tags:
+        - WorkCategory
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: 'demo name'
+                slug:
+                  type: year
+                  description: ''
+                  example: demo-slug
+      security: []
+  '/api/work-category/{id}':
+    get:
+      summary: 'WorkCategory View.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'The record exists.'
+                  data:
+                    id: 52
+                    name: rereeeeee
+                    slug: erererwerwerew
+                    created_at: '2022-03-17T06:05:27.000000Z'
+                    updated_at: '2022-03-17T06:05:27.000000Z'
+                    deleted_at: null
+                properties:
+                  message:
+                    type: string
+                    example: 'The record exists.'
+                  data:
+                    type: object
+                    example:
+                      id: 52
+                      name: rereeeeee
+                      slug: erererwerwerew
+                      created_at: '2022-03-17T06:05:27.000000Z'
+                      updated_at: '2022-03-17T06:05:27.000000Z'
+                      deleted_at: null
+      tags:
+        - WorkCategory
+      security: []
+    put:
+      summary: 'WorkCategory Update.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'The record has been updated successfully.'
+                  data:
+                    id: 52
+                    name: demo
+                    slug: demo-slug
+                    created_at: '2022-03-17T06:05:27.000000Z'
+                    updated_at: '2022-03-17T07:21:33.000000Z'
+                    deleted_at: null
+                properties:
+                  message:
+                    type: string
+                    example: 'The record has been updated successfully.'
+                  data:
+                    type: object
+                    example:
+                      id: 52
+                      name: demo
+                      slug: demo-slug
+                      created_at: '2022-03-17T06:05:27.000000Z'
+                      updated_at: '2022-03-17T07:21:33.000000Z'
+                      deleted_at: null
+      tags:
+        - WorkCategory
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: 'demo name'
+                slug:
+                  type: year
+                  description: ''
+                  example: demo-slug
+      security: []
+    delete:
+      summary: 'WorkCategory Delete.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'The record has been deleted successfully.'
+                properties:
+                  message:
+                    type: string
+                    example: 'The record has been deleted successfully.'
+      tags:
+        - WorkCategory
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: ''
+        example: 1
+        required: true
+        schema:
+          type: integer
+tags:
+  -
+    name: Application
+    description: ''
+  -
+    name: Authentication
+    description: ''
+  -
+    name: EducationFacilities
+    description: ''
+  -
+    name: Endpoints
+    description: ''
+  -
+    name: InternshipFeatures
+    description: ''
+  -
+    name: 'Media Posts'
+    description: ''
+  -
+    name: Students
+    description: ''
+  -
+    name: WorkCategory
+    description: ''
